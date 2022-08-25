@@ -1,0 +1,28 @@
+mixin button(props = {})
+  - 
+    const {
+      children = "Кнопка",
+      type = "button",
+      hasArrow = false,
+      arrowColor = '',
+      isOutlined = false,
+      isWord = false,
+    } = props;
+
+    const supClass = isOutlined ? "button_hollow" : isWord ? "button_word" : "";
+
+  div(class=`button ${supClass}`)
+    - if(isOutlined)
+      button.button__native-element(type= type)
+        span.button__native-element
+          span.button__text= children
+    - else if(isWord)
+      button.button__native-element(type= type)
+        span.button__text= children
+    - else if(hasArrow)
+      button(class="button__native-element button__native-element_arrow" type= type)
+        span.button__text= children
+        img.button__arrow(src="../../assets/img/arrow-forward-white.svg")
+    - else 
+      button.button__native-element(type= type)
+        span.button__text= children

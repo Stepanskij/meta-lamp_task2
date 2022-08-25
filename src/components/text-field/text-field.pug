@@ -1,0 +1,20 @@
+mixin text-field(props = {})
+  - 
+    const {      
+      placeholder = "",
+      type = "",
+      value = "",
+      isDate = false,
+      hasSubmitButton = false,
+    } = props;
+
+    const supClass = isDate ? "text-field_date" : hasSubmitButton ? "text-field_submit-button" : "";
+
+  div(class=`text-field ${supClass}`)  
+    - if(hasSubmitButton)  
+      input.text-field__native-element(placeholder= placeholder, type= type, value= value)
+      input.text-field__submitter(type="submit" value="arrow_forward")
+    - else if(isDate)
+      input.text-field__native-element(placeholder= placeholder, type= type, value= value)
+    - else 
+      input.text-field__native-element(placeholder= placeholder, type= type, value= value)

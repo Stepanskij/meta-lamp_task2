@@ -1,0 +1,13 @@
+mixin bullet-list(props = {})
+  -
+    const {
+      list = [{text: "Нельзя с питомцами"},
+      {text: "Без вечеринок и мероприятий"},
+      {text: "Время прибытия — после 13:00, а выезд до 12:00"},],
+    } = props;
+
+  div.bullet-list 
+    - for(let item of list)
+      div.bullet-list__bullet 
+        div.bullet-list__mark
+        div.bullet-list__text= item.text

@@ -1,0 +1,17 @@
+mixin radio-buttons(props = {})
+  -
+    const {
+      callNumber = 0,
+      list = [{isChecked: false, text: "Текст"},],
+      name = "",
+    } = props;
+
+  div.radio-buttons 
+    - for(let item of list)
+      label.radio-buttons__label
+        input.radio-buttons__input(
+          type="radio"
+          checked=item.isChecked
+          name= `${item.name}-${item.callNumber}`)
+        div.radio-buttons__mark
+        div.radio-buttons__text= item.text

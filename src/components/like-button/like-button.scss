@@ -1,0 +1,83 @@
+@import 'shared/styles/colors.scss';
+
+.like-button {
+  user-select: none;
+
+  &__background-gradient {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background-image: $color-purple-gradient-100;
+  }
+  &__input:not(:checked) ~ &__background-gradient {
+    background-image: linear-gradient($color-dark-shade-25);
+  }
+
+  &__background-hollow {
+    width: 38px;
+    height: 18px;
+    border-radius: 10px;
+    margin: 1px 0 0 1px;
+    background-color: white;
+  }
+
+  &__label {
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__frame {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    border: 1px solid $color-dark-shade-25;
+    border-radius: 10px;
+  }
+  &__input:checked ~ &__frame {
+    border: 1px solid $color-purple;
+  }
+
+  &__mark {
+    width: 20px;
+    height: 8px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  &__input:not(:checked) ~ &__mark_default {
+    opacity: 1;
+  }
+  &__input:checked ~ &__mark_active {
+    opacity: 1;
+  }
+
+  &__number {
+    position: absolute;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    margin-left: 22px;
+    opacity: 0;
+  }
+  &__input:not(:checked) ~ &__number_default {
+    color: $color-dark-shade-25;
+    opacity: 1;
+  }
+  &__input:checked ~ &__number_active {
+    color: $color-purple;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,115 @@
+@import 'shared/styles/colors.scss';
+
+.color-and-fonts {
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+  margin-right: 150px;
+
+  &__color-type {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__font-type {
+    display: flex;
+    margin-bottom: 50px;
+
+    &_paragraph {
+      width: 37px;
+      margin-right: 30px;
+      text-align: end;
+
+      &-type_H1 {
+        font-size: 24px;
+        color: $color-dark-shade-25;
+        line-height: 29px;
+      }
+      &-type_H2 {
+        font-size: 19px;
+        color: $color-dark-shade-25;
+        line-height: 23px;
+      }
+      &-type_H3 {
+        font-size: 12px;
+        color: $color-dark-shade-25;
+        line-height: 15px;
+      }
+      &-type_Body {
+        color: $color-dark-shade-25;
+        line-height: 24px;
+      }
+    }
+
+    &_text {
+      max-width: 360px;
+
+      &-type_H1 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      &-type_H2 {
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 23px;
+      }
+      &-type_H3 {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+
+      }
+      &-type_Body {
+        color: $color-dark-shade-75;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__color-square {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 6px;
+
+    &_color {
+      &_dark-shade-100 {
+        background: $color-dark-shade-100;
+      }
+      &_dark-shade-75 {
+        background: $color-dark-shade-75;
+      }
+      &_dark-shade-50 {
+        background: $color-dark-shade-50;
+      }
+      &_dark-shade-25 {
+        background: $color-dark-shade-25;
+      }
+      &_dark-shade-5 {
+        background: $color-dark-shade-5;
+      }
+      &_purple {
+        background: $color-purple;
+      }
+      &_green {
+        background: $color-green;
+      }
+    }
+  }
+
+  &__square-text {
+    margin-left: 40px;
+    &_top {
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 19px;
+    }
+    &_bottom {
+      font-size: 19px;
+    }
+  }
+}

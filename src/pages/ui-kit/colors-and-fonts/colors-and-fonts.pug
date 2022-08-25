@@ -1,0 +1,49 @@
+extends ../../layout/layout-ui-kit.pug
+
+mixin colors-list(props = {})
+  -
+    const {
+      objs = [
+        {color: "dark-shade-100", textTop: "Dark Shade 100%", textBottom: '#1F2041'},
+        {color: "dark-shade-75", textTop: "Dark Shade 75%", textBottom: '#1F2041'},
+        {color: "dark-shade-50", textTop: "Dark Shade 50%", textBottom: '#1F2041'},
+        {color: "dark-shade-25", textTop: "Dark Shade 25%", textBottom: '#1F2041'},
+        {color: "dark-shade-5", textTop: "Dark Shade 5%", textBottom: '#1F2041'},
+        {color: "purple", textTop: "Purple", textBottom: '#BC9CFF'},
+        {color: "green", textTop: "Green", textBottom: '#6FCF97'},
+      ]
+    } = props;
+
+  - for(let obj of objs)
+    div.color-and-fonts__color-type
+      div(class= `color-and-fonts__color-square color-and-fonts__color-square_color_${obj.color}`)
+      div(class= `color-and-fonts__square-text`)
+        div(class= `color-and-fonts__square-text_top`)= obj.textTop
+        div(class= `color-and-fonts__square-text_bottom`)= obj.textBottom
+
+mixin fonts-list(objFonts = {})
+  -
+    const {
+      objs = [
+        { typeText: "H1", text: 'This one is the sub-section or widget title'},
+        { typeText: "H2", text: 'Next one is the item title inside widgets'},
+        { typeText: "H3", text: 'This is a label or CTA text'},
+        { typeText: "Body", text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'},        
+      ]
+    } = objFonts;
+
+
+
+  - for(let obj of objs)
+    div.color-and-fonts__font-type
+      div(class= `color-and-fonts__font-type_paragraph color-and-fonts__font-type_paragraph-type_${obj.typeText}`)= obj.typeText
+      div(class= `color-and-fonts__font-type_text color-and-fonts__font-type_text-type_${obj.typeText}`)= obj.text
+
+block title
+  title Colors & Fonts 
+block content
+  div.color-and-fonts
+    div.color-and-fonts__colors
+      +colors-list()
+    div.color-and-fonts__fonts
+      +fonts-list()

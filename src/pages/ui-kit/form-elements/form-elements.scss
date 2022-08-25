@@ -1,0 +1,162 @@
+@import 'shared/styles/colors.scss';
+
+.form-elements {
+  width: 1140px;
+  padding: 0 150px 0 150px;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-column-gap: 126px;
+  grid-row-gap: 100px;
+
+  &__grid {
+    &-1 {
+      &-1 {
+        & [class='title'] {
+          margin-bottom: 5px;
+        }
+        & > :not(:first-child) {
+          margin-top: 20px;
+        }
+      }
+
+      &-2 {
+        & [class='title'] {
+          margin-bottom: 16px;
+        }
+        & > :not(:first-child) {
+          margin-top: 40px;
+        }
+      }
+
+      &-3 {
+        & > :not(:first-child) [class='title'] {
+          margin-bottom: 16px;
+        }
+        & > :first-child [class='title'] {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &-2 {
+      &-1 {
+        display: flex;
+        flex-direction: column;
+        & [class='title'] {
+          margin-bottom: 5px;
+        }
+        > :last-child {
+          margin-top: 20px;
+        }
+      }
+
+      &-2,
+      &-3 {
+        & [class='title'] {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &-3 {
+      &-1 {
+        display: flex;
+        flex-direction: column;
+        > :last-child {
+          margin-top: 20px;
+        }
+      }
+
+      &-2,
+      &-3 {
+        & [class='title'] {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    &-4 {
+      &-1 {
+      }
+
+      &-2 {
+        display: flex;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+    }
+  }
+
+  &__text-field {
+    &-1,
+    &-2 {
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+    }
+  }
+
+  &__date-dropdown {
+  }
+
+  &__checkbox-buttons {
+    width: 222px;
+  }
+
+  &__toggle {
+    > :last-child {
+      margin-top: 10px;
+    }
+  }
+
+  &__like-button {
+    &_group {
+      display: flex;
+      > :last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__rate-button {
+    &_group {
+      display: flex;
+      > :last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__buttons {
+    &_group-1 {
+      display: flex;
+      & div:first-child {
+        margin-right: 20px;
+      }
+    }
+    &_group-2 {
+      display: flex;
+      margin-top: 30px;
+      & div:first-child {
+        margin-right: 20px;
+      }
+    }
+    &_group-3 {
+      display: flex;
+      margin-top: 30px;
+      & div:first-child {
+        margin-right: 20px;
+      }
+    }
+    &_group-4 {
+      display: flex;
+      min-width: 320px;
+      margin-top: 30px;
+    }
+  }
+
+  &__dropdown {
+    width: min-content;
+  }
+}

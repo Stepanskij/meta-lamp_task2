@@ -1,0 +1,54 @@
+@import 'shared/styles/colors.scss';
+
+.date-dropdown {
+  max-width: 266px;
+
+  &__container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $color-dark-shade-25;
+    border-radius: 4px;
+    &:hover {
+      border-color: $color-dark-shade-50;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+
+      width: 207px;
+      height: 44px;
+      margin-left: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      color: $color-dark-shade-75;
+    }
+
+    &-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      min-width: 44px;
+      height: 44px;
+      transform: scaleY(-1);
+      &_is-opened {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  &__calendar-container {
+    max-height: 0;
+    position: absolute;
+    width: min-content;
+    overflow: hidden;
+    z-index: 1;
+    transition: max-height 0.3s;
+    &_is-opened {
+      max-height: 370px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+mixin title(props = {})
+  - 
+    const {
+      titleName = "",
+      titleSubText = "",    
+      } = props;
+
+  div.title
+    div.title__name= titleName
+    - if (titleSubText)
+      div.title__sub-text= titleSubText

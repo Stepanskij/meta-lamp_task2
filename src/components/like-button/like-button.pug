@@ -1,0 +1,26 @@
+mixin like-button(props = {})
+  - 
+    const {
+      isGradient = false,
+      isChecked = false,
+      number = 0,
+    } = props;
+
+  div.like-button
+    - if(isGradient)      
+        label.like-button__label
+          input.like-button__input(type="checkbox" checked=isChecked)
+          div.like-button__background-gradient
+            div.like-button__background-hollow
+          img(class="like-button__mark like-button__mark_default" src="../../assets/img/like-mark-default.svg")
+          img(class="like-button__mark like-button__mark_active" src="../../assets/img/like-mark-active.svg")
+          span(class="like-button__number like-button__number_default")= number
+          span(class="like-button__number like-button__number_active")= number+1
+    -else
+      label.like-button__label
+        input.like-button__input(type="checkbox" checked=isChecked)
+        div.like-button__frame
+        img(class="like-button__mark like-button__mark_default" src="../../assets/img/like-mark-default.svg")
+        img(class="like-button__mark like-button__mark_active" src="../../assets/img/like-mark-active.svg")
+        span(class="like-button__number like-button__number_default")= number
+        span(class="like-button__number like-button__number_active")= number+1

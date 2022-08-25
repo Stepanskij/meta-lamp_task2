@@ -1,0 +1,23 @@
+@import 'shared/styles/colors.scss';
+
+.bullet-list {
+  display: flex;
+  flex-direction: column;
+  &__bullet {
+    display: flex;
+  }
+
+  &__mark {
+    width: 10px;
+    height: 10px;
+    margin: 7px 10px 0 0;
+    background-color: $color-dark-shade-25;
+    border-radius: 20px;
+  }
+
+  &__text {
+    width: 270px;
+    line-height: 24px;
+    color: $color-dark-shade-75;
+  }
+}

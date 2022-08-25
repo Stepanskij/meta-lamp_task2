@@ -1,0 +1,49 @@
+@import 'shared/styles/colors.scss';
+
+.toggle {
+  &__label {
+    cursor: pointer;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    :last-child {
+      margin-left: 14px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__mark {    
+    width: 40px;
+    height: 20px;
+    border: 1px solid $color-dark-shade-25;
+    border-radius: 10px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      margin: 3px 0 0 3px;
+      background: $color-dark-shade-25;
+      border-radius: 10px;
+      transition: margin-left 0.3s;
+    }
+  }
+  &__input:checked ~ &__mark {
+    border: 1px solid $color-purple;
+  }
+  &__input:checked ~ &__mark::after {
+    margin: 3px 0 0 23px;
+    background: $color-purple-gradient-100;
+  }
+
+  &__text {
+    line-height: 24px;
+    color: $color-dark-shade-75;
+    white-space: nowrap;
+  }
+}

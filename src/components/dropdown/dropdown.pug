@@ -1,0 +1,24 @@
+mixin dropdown(props = {})
+  -
+    const {
+      hasButtons = false,
+    } = props;
+
+  div.dropdown    
+    div(class="dropdown__container js-dropdown__container")
+      span(class="dropdown__container-text js-dropdown__container-text")
+      div(class="dropdown__container-arrow js-dropdown__container-arrow")
+        img.dropdown__arrow-img(src="../../assets/img/expand-arrow-dark-75.svg") 
+    div(class="dropdown__list js-dropdown__list")
+      - for(let i=1; i<=3; i++)
+        div(class="dropdown__list-row js-dropdown__list-row")
+          div(class="dropdown__list-row-text js-dropdown__list-row-text")
+          div(class="dropdown__list-row-frame dropdown__list-row-frame_active js-dropdown__list-row-frame-minus")
+            div.dropdown__list-row-minus -
+          div(class="dropdown__list-row-number js-dropdown__list-row-number")
+          div(class="dropdown__list-row-frame dropdown__list-row-frame_active js-dropdown__list-row-frame-plus")
+            div.dropdown__list-row-plus +
+      - if (hasButtons)
+        div.dropdown__buttons
+          div(class="dropdown__buttons-clear dropdown__buttons-clear_hidden js-dropdown__buttons-clear") очистить
+          div(class="dropdown__buttons-apply js-dropdown__buttons-apply") применить

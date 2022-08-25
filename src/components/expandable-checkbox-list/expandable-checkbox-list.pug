@@ -1,0 +1,26 @@
+mixin expandable-checkbox-list(props = {})
+  -
+    const {
+      titleText = "текст заголовка",
+      list = [
+        {isChecked: true, text: "Завтрак"},
+        {isChecked: false, text: "Письменный стол"},
+        {isChecked: true, text: "Cтул для кормления"},
+        {isChecked: true, text: "Кроватка"},
+        {isChecked: true, text: "Телевизор"},
+        {isChecked: true, text: "Шампунь"},],
+    } = props;
+
+  div.expandable-checkbox-list    
+    div(class="expandable-checkbox-list__title js-expandable-checkbox-list__title")
+      span.expandable-checkbox-list__title-text= titleText
+      img(class="expandable-checkbox-list__title-expand-arrow js-expandable-checkbox-list__title-expand-arrow"
+        src="../../assets/img/expand-arrow-dark-50.svg")          
+    div(class="expandable-checkbox-list__list js-expandable-checkbox-list__list")
+      - for(let item of list)
+        div.expandable-checkbox-list__checkbox
+          label.expandable-checkbox-list__label
+            input.expandable-checkbox-list__input(type="checkbox" checked=item.isChecked)            
+            div.expandable-checkbox-list__checkbox-frame
+              img.expandable-checkbox-list__checkbox-mark(src="../../assets/img/check-mark.svg")
+          div.expandable-checkbox-list__text= item.text

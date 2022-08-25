@@ -1,0 +1,67 @@
+@import 'shared/styles/colors.scss';
+
+.pie-list {
+  display: flex;
+  align-items: flex-end;
+
+  &__pie {
+    &-text {
+      &-1 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      &-2 {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+      }
+    }
+    :nth-child(1)[class$='path_fill-color'] {
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+    }
+    :nth-child(3)[class$='path_fill-color'] {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+    :nth-child(5)[class$='path_fill-color'] {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+    :nth-child(7)[class$='path_fill-color'] {
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+    }
+  }
+
+  &__list {
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-column-gap: 5px;
+    align-items: center;
+    align-content: center;
+
+    &-marker {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+    }
+    :nth-child(1)[class$='marker'] {
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+    }
+    :nth-child(3)[class$='marker'] {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+    :nth-child(5)[class$='marker'] {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+    :nth-child(7)[class$='marker'] {
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+    }
+
+    &-text {
+      font-weight: 400;
+      line-height: 24px;
+      color: $color-dark-shade-75;
+    }
+  }
+}

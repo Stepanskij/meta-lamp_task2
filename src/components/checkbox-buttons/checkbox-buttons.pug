@@ -1,0 +1,27 @@
+mixin checkbox-buttons(props = {})
+  -
+    const {
+      isRichCheckboxButtons = false,      
+      list = [{isChecked: false, text: "Текст", additionalText: "дополнительный текст",},],
+    } = props;
+
+  div.checkbox-buttons    
+    - if(isRichCheckboxButtons)
+      - for(let item of list)
+        div.checkbox-buttons__checkbox
+          label.checkbox-buttons__label
+            input.checkbox-buttons__input(type="checkbox" checked=item.isChecked)
+            div.checkbox-buttons__checkbox-mark
+              img.checkbox-buttons__checkbox-mark-img(src="../../assets/img/check-mark.svg")
+            div.checkbox-buttons__frame
+          div(class="checkbox-buttons__text checkbox-buttons__text_rich")= item.text
+        div.checkbox-buttons__additional-text= item.additionalText
+    - else
+      - for(let item of list)
+        div.checkbox-buttons__checkbox
+          label.checkbox-buttons__label
+            input.checkbox-buttons__input(type="checkbox" checked=item.isChecked)
+            div.checkbox-buttons__checkbox-mark
+              img.checkbox-buttons__checkbox-mark-img(src="../../assets/img/check-mark.svg")
+            div.checkbox-buttons__frame
+          div.checkbox-buttons__text= item.text

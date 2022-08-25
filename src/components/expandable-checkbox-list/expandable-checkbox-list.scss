@@ -1,0 +1,90 @@
+@import 'shared/styles/colors.scss';
+
+.expandable-checkbox-list {
+  &__title {
+    cursor: pointer;
+    height: 15px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title-text {
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  &__title-expand-arrow {
+    width: 12px;
+    height: 8px;
+    user-select: none;
+    transform: scaleY(-1);
+    &_is-opened {
+      transform: scaleY(1);
+    }
+  }
+
+  &__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    > :not(:first-child) {
+      margin-top: 10px;
+    }
+    &_is-opened {
+      max-height: 171px;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    > :last-child {
+      margin-left: 10px;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &__checkbox-mark {
+    opacity: 0;
+  }
+  &__input:checked ~ &__checkbox-frame &__checkbox-mark {
+    opacity: 1;
+  }
+
+  &__checkbox-frame {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-dark-shade-25;
+    border-radius: 4px;
+  }
+  &__input:checked ~ &__checkbox-frame {
+    border: 1px solid $color-purple;
+  }
+
+  &__text {
+    line-height: 18px;
+    color: $color-dark-shade-50;
+  }
+}

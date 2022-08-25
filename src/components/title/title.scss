@@ -1,0 +1,19 @@
+@import 'shared/styles/colors.scss';
+
+.title {
+  display: flex;
+  justify-content: space-between;
+
+  &__name {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-dark-shade-100;
+    text-transform: uppercase;
+  }
+  &__sub-text {
+    font-size: 12px;
+    color: $color-dark-shade-50;
+    text-transform: uppercase;
+  }
+}

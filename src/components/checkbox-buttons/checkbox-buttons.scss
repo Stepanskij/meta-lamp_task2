@@ -1,0 +1,74 @@
+@import 'shared/styles/colors.scss';
+
+.checkbox-buttons {
+  $checkbox-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__checkbox {
+    display: flex;
+    & > :last-child {
+      margin-left: 10px;
+    }
+  }
+  &__checkbox + &__checkbox {
+    margin-top: 10px;
+  }
+  &__additional-text + &__checkbox {
+    margin-top: 10px;
+  }
+
+  &__label {
+    display: flex;
+    user-select: none;
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__checkbox-mark {
+    cursor: pointer;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  &__input:not(:checked) ~ &__checkbox-mark {
+    opacity: 0;
+  }
+
+  &__frame {
+    min-width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid $color-dark-shade-25;
+    border-radius: 4px;
+  }
+  &__input:checked ~ &__frame {
+    border: 1px solid $color-purple;
+  }
+
+  &__text {
+    line-height: 18px;
+    color: $color-dark-shade-50;
+    &_rich {
+      font-weight: 700;
+      color: $color-dark-shade-75;
+    }
+  }
+
+  &__additional-text {
+    width: 230px;
+    margin-left: 30px;
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-dark-shade-50;
+  }
+}

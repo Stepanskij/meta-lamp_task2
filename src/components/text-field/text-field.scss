@@ -1,0 +1,37 @@
+@import 'shared/styles/colors.scss';
+
+.text-field {
+  display: flex;
+  border: 1px solid $color-dark-shade-25;
+  border-radius: 4px;
+  &:hover,
+  &:focus-within {
+    border: 1px solid $color-dark-shade-50;
+  }
+
+  &__native-element {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 13px 15px;
+    outline: none;
+  }
+
+  &__submitter {
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Material Icons;
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-purple;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

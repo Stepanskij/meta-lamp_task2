@@ -1,0 +1,18 @@
+mixin rate-button(props = {})
+  -
+    const {
+      callNumber = 0,
+      checkedStarNumber = 1,
+    } = props;
+
+  div.rate-button
+    - for(let i=1; i<=5; i++) {
+      input.rate-button__input(type="radio"
+      name=`star-radio-${callNumber}`
+      checked=(checkedStarNumber === i)
+      id=`star-radio-${callNumber}-${i}`)
+      label.rate-button__label(for=`star-radio-${callNumber}-${i}`)
+        img(class="rate-button__mark rate-button__mark_default" src="../../assets/img/star-mark-default.svg")
+        img(class="rate-button__mark rate-button__mark_active" src="../../assets/img/star-mark-active.svg")
+
+    - }

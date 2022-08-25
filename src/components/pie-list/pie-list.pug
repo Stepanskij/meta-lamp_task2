@@ -1,0 +1,35 @@
+mixin pie-list(props = {})
+  -
+    const {
+      list = [
+      {text:"Великолепно", index:0},
+      {text:"Хорошо", index:1},
+      {text:"Удовлетворительно", index:2},
+      {text:"Разочарован", index:3},],
+    } = props;
+
+  div.pie-list
+    svg.pie-list__pie(width="120" height="120")
+      defs
+        linearGradient(id="Gradient1" x1="0" y1="0" x2="0" y2="1")
+          stop(class="stop1" offset="0%" stop-color="rgba(255, 227, 156, 1)")
+          stop(class="stop2" offset="100%" stop-color="rgba(255, 186, 156, 1)")
+        linearGradient(id="Gradient2" x1="0" y1="0" x2="0" y2="1")
+          stop(class="stop1" offset="0%" stop-color="#6FCF97")
+          stop(class="stop2" offset="100%" stop-color="#66D2EA")
+        linearGradient(id="Gradient3" x1="0" y1="0" x2="0" y2="1")
+          stop(class="stop1" offset="0%" stop-color="#BC9CFF")
+          stop(class="stop2" offset="100%" stop-color="#8BA4F9")
+        linearGradient(id="Gradient4" x1="0" y1="0" x2="0" y2="1")
+          stop(class="stop1" offset="0%" stop-color="rgba(144, 144, 144, 1)")
+          stop(class="stop2" offset="100%" stop-color="rgba(61, 73, 117, 1)")
+      -for(let i=0;i<=3;i++)
+        path(class="pie-list__path-fill-color js-pie-list__path-fill-color" data-index=`${i}`)
+        path(class="pie-list__path-none-color js-pie-list__path-none-color")
+      text(class="pie-list__pie-text-1 js-pie-list__pie-text-1" x="60" y="60" text-anchor="middle") 
+      text(class="pie-list__pie-text-2 js-pie-list__pie-text-2" x="60" y="80" text-anchor="middle") Голосов
+    div.pie-list__list
+      - for (let item of list)
+        div(class="pie-list__list-marker js-pie-list__list-marker" data-index=`${item.index}`)
+        div(class="pie-list__list-text js-pie-list__list-text" data-index=`${item.index}`)= item.text
+

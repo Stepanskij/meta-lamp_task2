@@ -1,0 +1,23 @@
+include ../like-button/like-button.pug
+
+mixin comment(props = {})
+  -
+    const {
+      photo = `../../assets/img/comment-photo.png`,
+      name = "Мурад Сарафанов",
+      dateRegistration = "5 дней назад",
+      likeButton = {isGradient:true, isChecked:true, number: 11},
+      text = `Великолепный матрас на кровати в основной спальне! 
+        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+        Выкрикивал комплименты повару — никто не жаловался из соседей.`,
+    } = props;
+
+  div.comment
+    div.comment__photo
+      img.comment__photo-img(src=`${photo}`)
+    div.comment__info
+      span.comment__name= name
+      span.comment__date-registration= dateRegistration
+    div.comment__like-button
+      +like-button(likeButton)
+    div.comment__text= text 

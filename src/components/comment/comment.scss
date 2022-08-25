@@ -1,0 +1,42 @@
+@import 'shared/styles/colors.scss';
+
+.comment {
+  display: grid;
+  grid-template: min-content min-content/min-content max-content;
+  gap: 10px;
+
+  &__photo-img {
+    border-radius: 32px;
+    width: 48px;
+    height: 48px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    color: $color-dark-shade-75;
+  }
+
+  &__name {
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__date-registration {
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__like-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    width: 653px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-dark-shade-75;
+  }
+}

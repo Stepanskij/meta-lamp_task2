@@ -1,0 +1,11 @@
+mixin range-slider(props = {})
+  -
+    const {
+      titleText = "RANGE SLIDER"
+    } = props;
+
+  div.range-slider
+    div.range-slider__title
+      div.range-slider__title-text= titleText
+      div(class="range-slider__title-values js-range-slider__title-values")
+    input(class="range-slider__input js-range-slider__input" type="text")

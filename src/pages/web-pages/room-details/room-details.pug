@@ -1,0 +1,13 @@
+extends ../../layout/layout-web-pages.pug
+
+include ../../../components/pie-list/pie-list.pug
+
+
+block title
+  title Room Details 
+block content
+
+  div.room-details 
+  
+    div(class="room-details__pie-list js-room-details__pie-list")
+      +pie-list()

@@ -1,0 +1,72 @@
+@import 'shared/styles/colors.scss';
+
+.button {
+  width: min-content;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+
+  &__native-element {
+    cursor: pointer;
+    width: 99px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 22px;
+    background-image: $color-purple-gradient-100;
+    color: #ffffff;
+    &_arrow {
+      width: 320px;
+    }
+    &:hover {
+      background-image: $color-purple-gradient-50;
+    }
+  }
+
+  &__text {
+    user-select: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  &_hollow &__native-element &__native-element {
+    width: calc(100%-4px);
+    height: calc(100%-4px);
+    background-color: white;
+    background-image: none;
+  }
+  &_hollow &__text {
+    color: $color-purple;
+  }
+
+  &_word &__native-element {
+    width: min-content;
+    height: min-content;
+    background-color: white;
+    background-image: none;
+  }
+  &_word &__text {
+    color: $color-purple;
+    white-space: nowrap;
+    &:hover {
+      color: $color-dark-shade-50;
+    }
+  }
+
+  &__arrow {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 13px;
+  }
+}

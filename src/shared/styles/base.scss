@@ -2,13 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+html {
+  font-size: 1rem;
+}
+
 *,
 *:after,
 *:before {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
+  margin: 0;
+  padding: 0;
+  border: 0;
   box-sizing: border-box;
   font-family: 'Montserrat';
-  font-size: 14px;
+  font-size: 0.875rem;
 }

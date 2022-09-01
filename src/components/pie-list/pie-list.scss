@@ -8,13 +8,13 @@
     &-text {
       &-1 {
         font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 1.5rem;
+        line-height: 1.8125rem;
       }
       &-2 {
         font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
         text-transform: uppercase;
       }
     }
@@ -33,17 +33,17 @@
   }
 
   &__list {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     display: grid;
     grid-template-columns: min-content min-content;
-    grid-column-gap: 5px;
+    grid-column-gap: 0.3125rem;
     align-items: center;
     align-content: center;
 
     &-marker {
-      width: 10px;
-      height: 10px;
-      border-radius: 10px;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 0.625rem;
     }
     :nth-child(1)[class$='marker'] {
       background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
@@ -60,7 +60,7 @@
 
     &-text {
       font-weight: 400;
-      line-height: 24px;
+      line-height: 1.5rem;
       color: $color-dark-shade-75;
     }
   }

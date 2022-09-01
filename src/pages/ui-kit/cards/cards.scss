@@ -1,0 +1,17 @@
+@import 'shared/styles/colors.scss';
+
+.cards {
+  padding: 0 8.75rem 0 8.75rem;
+  display: flex;
+
+  &__colum-1,
+  &__colum-2,
+  &__colum-3 {
+    & > * {
+      background: #ffffff;
+      border: 0.0625rem solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+      border-radius: 0.25rem;
+    }
+  }
+}

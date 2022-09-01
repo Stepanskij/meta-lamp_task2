@@ -1,80 +1,80 @@
 @import 'shared/styles/colors.scss';
 
 .color-and-fonts {
-  width: 1140px;
+  width: 71.25rem;
   display: flex;
   justify-content: space-between;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 9.375rem;
+  margin-right: 9.375rem;
 
   &__color-type {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   &__font-type {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 
     &_paragraph {
-      width: 37px;
-      margin-right: 30px;
+      width: 2.3125rem;
+      margin-right: 1.875rem;
       text-align: end;
 
       &-type_H1 {
-        font-size: 24px;
+        font-size: 1.5rem;
         color: $color-dark-shade-25;
-        line-height: 29px;
+        line-height: 1.8125rem;
       }
       &-type_H2 {
-        font-size: 19px;
+        font-size: 1.1875rem;
         color: $color-dark-shade-25;
-        line-height: 23px;
+        line-height: 1.4375rem;
       }
       &-type_H3 {
-        font-size: 12px;
+        font-size: 0.75rem;
         color: $color-dark-shade-25;
-        line-height: 15px;
+        line-height: 0.9375rem;
       }
       &-type_Body {
         color: $color-dark-shade-25;
-        line-height: 24px;
+        line-height: 1.5rem;
       }
     }
 
     &_text {
-      max-width: 360px;
+      max-width: 22.5rem;
 
       &-type_H1 {
         font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 1.5rem;
+        line-height: 1.8125rem;
       }
       &-type_H2 {
         font-weight: 700;
-        font-size: 19px;
-        line-height: 23px;
+        font-size: 1.1875rem;
+        line-height: 1.4375rem;
       }
       &-type_H3 {
         font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
         text-transform: uppercase;
 
       }
       &-type_Body {
         color: $color-dark-shade-75;
-        line-height: 24px;
+        line-height: 1.5rem;
       }
     }
   }
 
   &__color-square {
-    width: 70px;
-    height: 70px;
-    min-width: 70px;
-    border-radius: 6px;
+    width: 4.375rem;
+    height: 4.375rem;
+    min-width: 4.375rem;
+    border-radius: 0.375rem;
 
     &_color {
       &_dark-shade-100 {
@@ -102,14 +102,14 @@
   }
 
   &__square-text {
-    margin-left: 40px;
+    margin-left: 2.5rem;
     &_top {
-      margin-bottom: 5px;
+      margin-bottom: 0.3125rem;
       font-weight: 700;
-      font-size: 19px;
+      font-size: 1.1875rem;
     }
     &_bottom {
-      font-size: 19px;
+      font-size: 1.1875rem;
     }
   }
 }

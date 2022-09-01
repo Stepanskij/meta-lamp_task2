@@ -1,0 +1,21 @@
+mixin paginator(props = {})
+  - 
+    const {      
+    } = props;
+
+  div.paginator
+    div.paginator__container
+      div(class="paginator__arrow-left js-paginator__arrow-left")
+        img(class="paginator__arrow-img" src="../../assets/img/paginator-arrow-right.svg")
+      div(class="paginator__first-page js-paginator__first-page")
+      div(class="paginator__ellipsis js-paginator__ellipsis") ...
+      div(class="paginator__pre-page js-paginator__pre-page")
+      div(class="paginator__pre-page js-paginator__pre-page")
+      div(class="paginator__select-page js-paginator__select-page")
+      div(class="paginator__post-page js-paginator__post-page")
+      div(class="paginator__post-page js-paginator__post-page")
+      div(class="paginator__ellipsis  js-paginator__ellipsis") ...
+      div(class="paginator__last-page js-paginator__last-page")
+      div(class="paginator__arrow-right js-paginator__arrow-right")
+        img(class="paginator__arrow-img" src="../../assets/img/paginator-arrow-right.svg")
+    div(class="paginator__info-text js-paginator__info-text")

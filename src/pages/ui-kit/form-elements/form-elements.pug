@@ -16,6 +16,8 @@ include ../../../components/dropdown/dropdown.pug
 include ../../../components/date-dropdown/date-dropdown.pug
 include ../../../components/divided-date-dropdown/divided-date-dropdown.pug
 include ../../../components/range-slider/range-slider.pug
+include ../../../components/paginator/paginator.pug
+include ../../../components/masked-text-field/masked-text-field.pug
 
 
 block title
@@ -26,13 +28,19 @@ block content
 
     div.form-elements__grid-1-1
       div.form-elements__text-field-1
-        +title({titleName: "text field", titleSubText: "default"})
+        +title({titleName: "text field"})
         +text-field({placeholder: "Email", type: "email"})
       div.form-elements__text-field-2
         +title({titleName: "text field", titleSubText: "hover / focus"})
         +text-field({placeholder: "Text field", type: "text", value: "This is pretty awesome",})
       div(class="form-elements__divided-date-dropdown js-form-elements__divided-date-dropdown")
-        +divided-date-dropdown()      
+        +divided-date-dropdown()    
+      div(class="form-elements__dropdown js-form-elements__dropdown")
+        +title({titleName: "dropdown"})
+        +dropdown({hasButtons:true})  
+      div(class="form-elements__masked-text-field js-form-elements__masked-text-field")
+        +title({titleName: "masked text field"})
+        +masked-text-field()              
       div(class="form-elements__filter-date-dropdown js-form-elements__filter-date-dropdown")
         +title({titleName: "filter date dropdown"})
         +date-dropdown()        
@@ -85,6 +93,9 @@ block content
           +button({children: 'Click me',isWord:true})
         div.form-elements__buttons_group-4
           +button({children: 'Перейти к оплате', hasArrow: true, arrowColor: 'white'})
+      div(class="form-elements__pagination js-form-elements__pagination")
+        +title({titleName: "pagination"})
+        +paginator()
 
     div.form-elements__grid-2-1
       div(class="form-elements__dropdown js-form-elements__dropdown")

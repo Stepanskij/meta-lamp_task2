@@ -1,0 +1,49 @@
+.paginator {
+  &__container {
+    display: flex;
+    user-select: none;
+    & > * {
+      cursor: pointer;
+      min-width: 2.5rem;
+      min-height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 1.375rem;
+      &[class$='ellipsis'] {
+        cursor: auto;
+      }
+      &.-focus- {
+        background: linear-gradient(rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
+      }
+      &.-hide- {
+        min-width: 0;
+        max-width: 0;
+      }
+    }
+  }
+
+  &__select-page {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: white;
+  }
+
+  &__arrow {
+    &-left {
+      transform: scaleX(-1);
+    }
+    &-left,
+    &-right {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+  }
+
+  &__info-text {
+    margin-top: 0.6875rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: rgba(31, 32, 65, 0.75);
+  }
+}

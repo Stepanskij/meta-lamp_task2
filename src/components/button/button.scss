@@ -6,21 +6,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 22px;
+  border-radius: 1.375rem;
 
   &__native-element {
     cursor: pointer;
-    width: 99px;
-    height: 44px;
+    width: 6.1875rem;
+    height: 2.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    border-radius: 22px;
+    border-radius: 1.375rem;
     background-image: $color-purple-gradient-100;
     color: #ffffff;
     &_arrow {
-      width: 320px;
+      width: 20rem;
     }
     &:hover {
       background-image: $color-purple-gradient-50;
@@ -30,14 +30,14 @@
   &__text {
     user-select: none;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
     text-transform: uppercase;
   }
 
   &_hollow &__native-element &__native-element {
-    width: calc(100%-4px);
-    height: calc(100%-4px);
+    width: calc(100%-0.25rem);
+    height: calc(100%-0.25rem);
     background-color: white;
     background-image: none;
   }
@@ -60,13 +60,13 @@
   }
 
   &__arrow {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 13px;
+    right: 0.8125rem;
   }
 }

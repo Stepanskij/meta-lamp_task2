@@ -1,0 +1,18 @@
+extends ../../layout/layout-ui-kit.pug
+
+include ../../../components/chose-room/chose-room.pug
+include ../../../components/account-registration/account-registration.pug
+
+
+block title
+  title Cards 
+block content
+
+  div.cards
+    div.cards__colum-1
+      div.cards__chose-room
+        +chose-room()
+      div.cards__account-registration
+        +account-registration()
+    div.cards__colum-2
+    div.cards__colum-3

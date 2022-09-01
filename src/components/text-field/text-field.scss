@@ -2,33 +2,33 @@
 
 .text-field {
   display: flex;
-  border: 1px solid $color-dark-shade-25;
-  border-radius: 4px;
+  border: 0.0625rem solid $color-dark-shade-25;
+  border-radius: 0.25rem;
   &:hover,
   &:focus-within {
-    border: 1px solid $color-dark-shade-50;
+    border: 0.0625rem solid $color-dark-shade-50;
   }
 
   &__native-element {
     position: relative;
     height: 100%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background: #ffffff;
-    padding: 13px 15px;
+    padding: 0.8125rem 0.9375rem;
     outline: none;
   }
 
   &__submitter {
     cursor: pointer;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Material Icons;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     color: $color-purple;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     -webkit-background-clip: text;

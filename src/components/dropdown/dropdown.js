@@ -30,12 +30,14 @@ class Dropdown {
 
   _setEventHandlers = () => {
     this.DOMContainer.addEventListener('click', this._changeOpenState);
-    this.items.map(item => {
-      item.DOMButtonMinus.addEventListener('click', this.updateInputText);
-      item.DOMButtonMinus.addEventListener('click', this.updateClearButton);
-      item.DOMButtonPlus.addEventListener('click', this.updateInputText);
-      item.DOMButtonPlus.addEventListener('click', this.updateClearButton);
-    });
+    if (this.DOMButtonClear) {
+      this.items.map(item => {
+        item.DOMButtonMinus.addEventListener('click', this.updateInputText);
+        item.DOMButtonMinus.addEventListener('click', this.updateClearButton);
+        item.DOMButtonPlus.addEventListener('click', this.updateInputText);
+        item.DOMButtonPlus.addEventListener('click', this.updateClearButton);
+      });
+    }
     if (this.DOMButtonClear) {
       this.DOMButtonClear.addEventListener('click', this._resetValues);
       this.DOMButtonClear.addEventListener('click', this.updateClearButton);

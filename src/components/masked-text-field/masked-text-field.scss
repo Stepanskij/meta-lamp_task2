@@ -1,0 +1,26 @@
+@import 'shared/styles/colors.scss';
+
+.masked-text-field {
+  width: 20rem;
+  height: 2.75rem;
+  display: flex;
+  border: 0.0625rem solid $color-dark-shade-25;
+  border-radius: 0.25rem;
+  &:hover,
+  &:focus-within {
+    border: 0.0625rem solid $color-dark-shade-50;
+  }
+
+  &__input {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.25rem;
+    background: #ffffff;
+    padding: 0.8125rem 0.9375rem;
+    outline: none;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+}

@@ -1,10 +1,10 @@
 @import 'shared/styles/colors.scss';
 
 .radio-buttons {
-  $radio-buttons-size: 20px;
+  $radio-buttons-size: 1.25rem;
   display: flex;
   :first-child {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 
   &__label {
@@ -22,32 +22,32 @@
   &__mark {
     width: $radio-buttons-size;
     height: $radio-buttons-size;
-    margin-right: 10px;
+    margin-right: 0.625rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $color-dark-shade-25;
-    border-radius: 10px;
+    border: 0.0625rem solid $color-dark-shade-25;
+    border-radius: 0.625rem;
     &_item {
-      width: 12px;
-      height: 12px;
+      width: 0.75rem;
+      height: 0.75rem;
       background: $color-purple-gradient-100;
-      border-radius: 10px;
+      border-radius: 0.625rem;
     }
   }
   &__input:checked ~ &__mark {
-    border: 1px solid $color-purple;
+    border: 0.0625rem solid $color-purple;
   }
   &__input:checked ~ &__mark::after {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 0.75rem;
+    height: 0.75rem;
     background: $color-purple-gradient-100;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
 
   &__text {
-    line-height: 24px;
+    line-height: 1.5rem;
     color: $color-dark-shade-50;
   }
   &__input:checked ~ &__text {

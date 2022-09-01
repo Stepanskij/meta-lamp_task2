@@ -1,15 +1,15 @@
 @import 'shared/styles/colors.scss';
 
 .date-dropdown {
-  max-width: 266px;
+  max-width: 16.625rem;
 
   &__container {
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid $color-dark-shade-25;
-    border-radius: 4px;
+    border: 0.0625rem solid $color-dark-shade-25;
+    border-radius: 0.25rem;
     &:hover {
       border-color: $color-dark-shade-50;
     }
@@ -18,11 +18,11 @@
       display: flex;
       align-items: center;
 
-      width: 207px;
-      height: 44px;
-      margin-left: 15px;
+      width: 12.9375rem;
+      height: 2.75rem;
+      margin-left: 0.9375rem;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 1.5rem;
       color: $color-dark-shade-75;
     }
 
@@ -30,9 +30,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      min-width: 44px;
-      height: 44px;
+      width: 2.75rem;
+      min-width: 2.75rem;
+      height: 2.75rem;
       transform: scaleY(-1);
       &_is-opened {
         transform: scaleY(1);
@@ -48,7 +48,7 @@
     z-index: 1;
     transition: max-height 0.3s;
     &_is-opened {
-      max-height: 370px;
+      max-height: 23.125rem;
     }
   }
 }

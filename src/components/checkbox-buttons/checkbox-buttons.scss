@@ -1,7 +1,7 @@
 @import 'shared/styles/colors.scss';
 
 .checkbox-buttons {
-  $checkbox-size: 20px;
+  $checkbox-size: 1.25rem;
 
   display: flex;
   flex-direction: column;
@@ -9,14 +9,14 @@
   &__checkbox {
     display: flex;
     & > :last-child {
-      margin-left: 10px;
+      margin-left: 0.625rem;
     }
   }
   &__checkbox + &__checkbox {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
   &__additional-text + &__checkbox {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 
   &__label {
@@ -46,15 +46,15 @@
   &__frame {
     min-width: $checkbox-size;
     height: $checkbox-size;
-    border: 1px solid $color-dark-shade-25;
-    border-radius: 4px;
+    border: 0.0625rem solid $color-dark-shade-25;
+    border-radius: 0.25rem;
   }
   &__input:checked ~ &__frame {
-    border: 1px solid $color-purple;
+    border: 0.0625rem solid $color-purple;
   }
 
   &__text {
-    line-height: 18px;
+    line-height: 1.125rem;
     color: $color-dark-shade-50;
     &_rich {
       font-weight: 700;
@@ -63,12 +63,12 @@
   }
 
   &__additional-text {
-    width: 230px;
-    margin-left: 30px;
-    margin-top: 5px;
+    width: 14.375rem;
+    margin-left: 1.875rem;
+    margin-top: 0.3125rem;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
     color: $color-dark-shade-50;
   }
 }

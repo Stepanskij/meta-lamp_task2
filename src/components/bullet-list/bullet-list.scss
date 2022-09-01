@@ -8,16 +8,16 @@
   }
 
   &__mark {
-    width: 10px;
-    height: 10px;
-    margin: 7px 10px 0 0;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0.4375rem 0.625rem 0 0;
     background-color: $color-dark-shade-25;
-    border-radius: 20px;
+    border-radius: 1.25rem;
   }
 
   &__text {
-    width: 270px;
-    line-height: 24px;
+    width: 16.875rem;
+    line-height: 1.5rem;
     color: $color-dark-shade-75;
   }
 }

@@ -4,9 +4,9 @@
   user-select: none;
 
   &__background-gradient {
-    width: 40px;
-    height: 20px;
-    border-radius: 10px;
+    width: 2.5rem;
+    height: 1.25rem;
+    border-radius: 0.625rem;
     background-image: $color-purple-gradient-100;
   }
   &__input:not(:checked) ~ &__background-gradient {
@@ -14,20 +14,20 @@
   }
 
   &__background-hollow {
-    width: 38px;
-    height: 18px;
-    border-radius: 10px;
-    margin: 1px 0 0 1px;
+    width: 2.375rem;
+    height: 1.125rem;
+    border-radius: 0.625rem;
+    margin: 0.0625rem 0 0 0.0625rem;
     background-color: white;
   }
 
   &__label {
     cursor: pointer;
-    width: 40px;
-    height: 20px;
+    width: 2.5rem;
+    height: 1.25rem;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color: white;
   }
 
@@ -39,18 +39,18 @@
 
   &__frame {
     position: absolute;
-    width: 40px;
-    height: 20px;
-    border: 1px solid $color-dark-shade-25;
-    border-radius: 10px;
+    width: 2.5rem;
+    height: 1.25rem;
+    border: 0.0625rem solid $color-dark-shade-25;
+    border-radius: 0.625rem;
   }
   &__input:checked ~ &__frame {
-    border: 1px solid $color-purple;
+    border: 0.0625rem solid $color-purple;
   }
 
   &__mark {
-    width: 20px;
-    height: 8px;
+    width: 1.25rem;
+    height: 0.5rem;
     position: absolute;
     display: flex;
     align-items: center;
@@ -67,9 +67,9 @@
   &__number {
     position: absolute;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    margin-left: 22px;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    margin-left: 1.375rem;
     opacity: 0;
   }
   &__input:not(:checked) ~ &__number_default {

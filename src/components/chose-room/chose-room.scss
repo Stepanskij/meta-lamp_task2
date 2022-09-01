@@ -1,0 +1,27 @@
+@import 'shared/styles/colors.scss';
+
+.chose-room {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  &__title {
+    margin-bottom: 21px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-dark-shade-100;
+  }
+
+  &__dates {
+    margin-bottom: 21px;
+  }
+
+  &__guests {
+    margin-bottom: 31px;
+    &>:first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__button {
+  }
+}

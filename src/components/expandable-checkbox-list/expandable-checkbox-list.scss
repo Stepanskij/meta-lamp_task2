@@ -3,23 +3,23 @@
 .expandable-checkbox-list {
   &__title {
     cursor: pointer;
-    height: 15px;
-    margin-bottom: 18px;
+    height: 0.9375rem;
+    margin-bottom: 1.125rem;
     display: flex;
     align-items: center;
   }
 
   &__title-text {
-    margin-right: 30px;
+    margin-right: 1.875rem;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
     text-transform: uppercase;
   }
 
   &__title-expand-arrow {
-    width: 12px;
-    height: 8px;
+    width: 0.75rem;
+    height: 0.5rem;
     user-select: none;
     transform: scaleY(-1);
     &_is-opened {
@@ -32,24 +32,24 @@
     overflow: hidden;
     transition: max-height 1s;
     > :not(:first-child) {
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
     &_is-opened {
-      max-height: 171px;
+      max-height: 10.6875rem;
     }
   }
 
   &__checkbox {
     display: flex;
     > :last-child {
-      margin-left: 10px;
+      margin-left: 0.625rem;
     }
   }
 
   &__label {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,20 +71,20 @@
   }
 
   &__checkbox-frame {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $color-dark-shade-25;
-    border-radius: 4px;
+    border: 0.0625rem solid $color-dark-shade-25;
+    border-radius: 0.25rem;
   }
   &__input:checked ~ &__checkbox-frame {
-    border: 1px solid $color-purple;
+    border: 0.0625rem solid $color-purple;
   }
 
   &__text {
-    line-height: 18px;
+    line-height: 1.125rem;
     color: $color-dark-shade-50;
   }
 }

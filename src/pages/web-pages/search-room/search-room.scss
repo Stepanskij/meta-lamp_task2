@@ -1,0 +1,75 @@
+@import 'shared/styles/colors.scss';
+
+.search-room {
+  width: 1440px;
+  padding: 30px 140px 70px 140px;
+  display: flex;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+
+  &__block {
+    &-1 {
+      max-width: 266px;
+      display: flex;
+      flex-direction: column;
+
+      & [class='title'] {
+        margin-bottom: 5px;
+      }
+    }
+
+    &-2 {
+      margin-left: 60px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__guests {
+    margin-top: 20px;
+  }
+
+  &__price-range {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    &-text {
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: $color-dark-shade-50;
+    }
+  }
+
+  &__house-rules {
+    margin-top: 30px;
+    [class='title'] {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__room-amenities,
+  &__additional-amenities {
+    margin-top: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-dark-shade-100;
+  }
+  &__rooms {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content min-content;
+    row-gap: 20px;
+    column-gap: 12px;
+  }
+  &__paginator {
+    margin-top: 41px;
+    align-self: center;
+  }
+}

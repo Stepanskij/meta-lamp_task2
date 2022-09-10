@@ -1,4 +1,74 @@
 @import 'shared/styles/colors.scss';
 
 .room-details {
+  width: 1440px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+
+  &__photos {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content;
+  }
+  &__photo {
+    &-1 {
+      width: 981px;
+      height: 485px;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      background-image: url(../../../shared/img/background-room-details-1.png);
+      background-size: 100% auto;
+    }
+    &-2 {
+      width: 461px;
+      height: 243px;
+      background-image: url(../../../shared/img/background-room-details-2.png);
+    }
+    &-3 {
+      width: 461px;
+      height: 243px;
+      background-image: url(../../../shared/img/background-room-details-3.png);
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    color: $color-dark-shade-100;
+    & + * {
+      margin-top: 20px;
+    }
+  }
+
+  &__info {
+    padding: 70px 0 70px 140px;
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content;
+    column-gap: 60px;
+    row-gap: 30px;
+  }
+
+  &__guest-reviews {
+    > :not(:first-child) {
+      margin-top: 20px;
+    }
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &__cancel-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-dark-shade-75;
+  }
+
+  &__reserve-room-card {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
 }

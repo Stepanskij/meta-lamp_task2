@@ -1,0 +1,14 @@
+extends ../../layout/layout-web-pages.pug
+
+include ../../../components/chose-room-card/chose-room-card.pug
+
+
+block title
+  title Room Details 
+block content
+
+  div.landing-page
+    div(class="landing-page__chose-room-card js-landing-page__chose-room-card")
+      +chose-room-card()
+    div.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+

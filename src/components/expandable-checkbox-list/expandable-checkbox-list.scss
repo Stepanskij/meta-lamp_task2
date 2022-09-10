@@ -30,7 +30,7 @@
   &__list {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s;
+    transition: max-height 0.75s;
     > :not(:first-child) {
       margin-top: 0.625rem;
     }

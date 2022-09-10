@@ -1,19 +1,21 @@
 mixin advantages(props = {})  
   -
     const {
+      img = [`../../assets/img/advantage-comfort.svg`,`../../assets/img/advantage-convenience.svg`,`../../assets/img/advantage-cosiness.svg`],
+      titleText = ["Комфорт","Удобство","Уют"],
+      mainText = ["Шумопоглощающие стены","Окно в каждой из спален","Номер оснащён камином"],
+      hasComfortConvenienceCosiness = [true,true,false]
     } = props;
 
   div.advantages
-    div.advantages__container
-      img.advantages__img(src="../../assets/img/advantage-comfort.svg")
-      div.advantages__text
-        span.advantages__title-text Комфорт
-        span.advantages__main-text Шумопоглощающие стены
-    div.advantages__separator
-    div.advantages__container
-      img.advantages__img(src="../../assets/img/advantage-convenience.svg")
-      div.advantages__text
-        span.advantages__title-text Удобство
-        span.advantages__main-text Окно в каждой из спален
-    div.advantages__separator
+    - for(let i=0;i<3;i++)
+      - if (hasComfortConvenienceCosiness[i])
+        div.advantages__container
+          img.advantages__img(src=`${img[i]}`)
+          div.advantages__text
+            span.advantages__title-text= titleText[i]
+            span.advantages__main-text= mainText[i]
+        - if (i!==2) 
+          div.advantages__separator
+
 

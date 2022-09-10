@@ -30,7 +30,7 @@
 
   &__button {
     height: 44px;
-    margin-top: 38px;
+    margin-top: 20px;
   }
 
   &__enter {
@@ -39,6 +39,7 @@
     align-items: center;
     justify-content: space-between;
     > :last-child {
+      width: 99px;
       height: 44px;
     }
 

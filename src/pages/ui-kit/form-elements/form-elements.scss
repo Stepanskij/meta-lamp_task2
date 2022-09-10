@@ -132,30 +132,24 @@
   }
 
   &__buttons {
-    &_group-1 {
-      height: 44px;
-      display: flex;
-      & div:first-child {
-        margin-right: 1.25rem;
-      }
+    > :not(:first-child) {
+      margin-top: 20px;
     }
-    &_group-2 {
-      height: 44px;
-      display: flex;
-      margin-top: 1.875rem;
-      & div:first-child {
-        margin-right: 1.25rem;
-      }
-    }
+    &_group-1,
+    &_group-2,
     &_group-3 {
       height: 44px;
       display: flex;
-      margin-top: 1.875rem;
       & div:first-child {
         margin-right: 1.25rem;
       }
+      > * {
+        width: 99px;
+      }
     }
+
     &_group-4 {
+      width: 320px;
       height: 44px;
       display: flex;
       min-width: 20rem;

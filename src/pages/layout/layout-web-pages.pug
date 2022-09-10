@@ -1,8 +1,12 @@
 extends layout-doc
 
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+
 block title
 
 block body
-  
+  div(class="layout__header js-layout__header")
+    +header()
   block content
-  
+  +footer()

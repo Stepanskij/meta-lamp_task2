@@ -1,0 +1,13 @@
+@import 'shared/styles/colors.scss';
+
+.registration {
+  position: relative;
+  width: 1440px;
+  height: 753px;
+  background-image: url(../../../shared/img/background-registration-page.png);
+  &__account-registration-card {
+    position: absolute;
+    top: 20px;
+    left: calc(1440px / 2 - 380px / 2);
+  }
+}

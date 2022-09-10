@@ -1,0 +1,53 @@
+extends ../../layout/layout-web-pages.pug
+
+include ../../../components/title/title.pug
+include ../../../components/date-dropdown-card/date-dropdown-card.pug
+include ../../../components/dropdown/dropdown.pug
+include ../../../components/range-slider/range-slider.pug
+include ../../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../../components/room-show-card/room-show-card.pug
+include ../../../components/paginator/paginator.pug
+
+block title
+  title Search Room 
+block content
+
+  div.search-room
+    div.search-room__block-1
+      div(class="search-room__dates-of-stay js-search-room__dates-of-stay")
+        +title({titleName:"даты пребывания в отеле"})
+        +date-dropdown-card()
+      div(class="search-room__guests js-search-room__guests")
+        +title({titleName:"гости"})
+        +dropdown({hasButtons:true})
+      div(class="search-room__price-range js-search-room__price-range")
+        +range-slider({titleText:"диапазон цены"})
+        div.search-room__price-range-text Стоимость за сутки пребывания в номере
+      div.search-room__house-rules
+        +title({titleName:"правила дома"})
+        +checkbox-buttons({list: [
+          {isChecked: false, text: "Можно курить"},
+          {isChecked: true, text: "Можно с питомцами"},
+          {isChecked: true, text: "Можно пригласить гостей (до 10 человек)"},
+          ],})
+      div.search-room__house-rules
+        +title({titleName: "доступность"})
+        +checkbox-buttons({isRichCheckboxButtons:true,
+          list: [
+          {isChecked: false, text: "Широкий коридор", additionalText: "Ширина коридоров в номере не менее 91 см.",},
+          {isChecked: false, text: "Помощник для инвалидов", additionalText: "На 1 этаже вас встретит специалист и проводит до номера.",},
+          ],})
+      div(class="search-room__room-amenities js-search-room__room-amenities")
+        +title({titleName:"удобства номера"})
+        +dropdown()
+      div(class="search-room__additional-amenities js-search-room__additional-amenities")
+        +expandable-checkbox-list({titleText:"дополнительные удобства",})
+    div.search-room__block-2
+      div.search-room__title Номера, которые мы для вас подобрали
+      div.search-room__rooms
+        - for (let i=1; i<=3*4; i++)
+          div(class="search-room__room js-search-room__room")
+            +room-show-card()
+      div(class="search-room__paginator js-search-room__paginator")
+        +paginator()

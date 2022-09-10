@@ -1,0 +1,13 @@
+extends ../../layout/layout-web-pages.pug
+
+include ../../../components/account-registration-card/account-registration-card.pug
+
+
+block title
+  title Registration
+block content
+
+  div.registration
+    div(class="registration__account-registration-card js-registration__account-registration-card")
+      +account-registration-card()
+

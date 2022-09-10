@@ -1,0 +1,13 @@
+extends ../../layout/layout-web-pages.pug
+
+include ../../../components/enter-card/enter-card.pug
+
+
+block title
+  title Room Details 
+block content
+
+  div.sign-in
+    div(class="sign-in__enter-card js-sign-in__enter-card")
+      +enter-card()
+

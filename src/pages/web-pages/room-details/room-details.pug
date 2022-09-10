@@ -1,13 +1,47 @@
 extends ../../layout/layout-web-pages.pug
 
 include ../../../components/pie-list/pie-list.pug
-
+include ../../../components/reserve-room-card/reserve-room-card.pug
+include ../../../components/advantages/advantages.pug
+include ../../../components/bullet-list/bullet-list.pug
+include ../../../components/comment/comment.pug
 
 block title
   title Room Details 
 block content
 
   div.room-details 
-  
-    div(class="room-details__pie-list js-room-details__pie-list")
-      +pie-list()
+    div.room-details__photos
+      div.room-details__photo-1
+      div.room-details__photo-2
+      div.room-details__photo-3
+    div.room-details__info
+      div.room-details__information-about-number
+        span.room-details__title Сведения о номере
+        div.room-details__advantages
+          +advantages( {hasComfortConvenienceCosiness: [true,true,true]})
+      div.room-details__impressions-of-room
+        span.room-details__title Впечатления от номера
+        div(class="room-details__pie-list js-room-details__pie-list")
+          +pie-list()
+      div.room-details__guest-reviews
+        span.room-details__title Отзывы посетителей номера
+        div.room-details__review-1
+          +comment()
+        div.room-details__review-2
+          +comment({
+            photo: `../../assets/img/comment-photo-2.png`,
+            name: "Патрисия Стёклышкова",
+            dateRegistration : "Неделю назад",
+            likeButton: {isGradient:true, isChecked:false, number: 2},
+            text: `Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент`,
+              })
+      div.room-details__rules
+        span.room-details__title Правила
+        div.room-details__bullet-list
+          +bullet-list()
+      div.room-details__cancel
+        span.room-details__title Отмена
+        div.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      div(class="room-details__reserve-room-card js-room-details__reserve-room-card")
+        +reserve-room-card()

@@ -14,7 +14,11 @@ const pages = [
   { pageName: 'form-elements', pageType: 'ui-kit' },
   { pageName: 'cards', pageType: 'ui-kit' },  
   { pageName: 'headers-and-footers', pageType: 'ui-kit' },
-  { pageName: 'room-details', pageType: 'web-pages' },
+  { pageName: 'landing-page', pageType: 'web-pages' },
+  { pageName: 'room-details', pageType: 'web-pages' },    
+  { pageName: 'registration', pageType: 'web-pages' },
+  { pageName: 'search-room', pageType: 'web-pages' },  
+  { pageName: 'sign-in', pageType: 'web-pages' },
 ];
 
 const pluginsOptions = [];

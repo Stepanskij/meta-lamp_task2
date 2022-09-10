@@ -1,4 +1,8 @@
 .paginator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__container {
     display: flex;
     user-select: none;

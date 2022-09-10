@@ -1,0 +1,38 @@
+include ../divided-date-dropdown-card/divided-date-dropdown-card.pug
+include ../dropdown/dropdown.pug
+include ../title/title.pug
+include ../button/button.pug
+
+mixin reserve-room-card(props = {})  
+  -
+    const {
+    } = props;
+
+  div.reserve-room-card
+    div(class="reserve-room-card__title js-reserve-room-card__title")
+      span.reserve-room-card__title-room-number-symbol №	
+      span(class="reserve-room-card__title-room-number js-reserve-room-card__title-room-number")
+      span(class="reserve-room-card__title-room-class js-reserve-room-card__title-room-class")
+      span(class="reserve-room-card__title-room-price js-reserve-room-card__title-room-price")
+      span.reserve-room-card__title-room-price-period в сутки
+    div(class="reserve-room-card__dates js-reserve-room-card__dates")
+      +divided-date-dropdown-card({textTitle1:"Прибытие",textTitle2: "Выезд",})
+    div(class="reserve-room-card__guests js-reserve-room-card__guests")
+      +title({titleName:"Гости"})
+      +dropdown({hasButtons:true})
+    div.reserve-room-card__price-info
+      div(class="reserve-room-card__price-info-1-1 js-reserve-room-card__price-info-1-1") 
+      div(class="reserve-room-card__price-info-1-2 js-reserve-room-card__price-info-1-2") 
+      div(class="reserve-room-card__price-info-2-1 js-reserve-room-card__price-info-2-1")
+      div.reserve-room-card__price-info-2-2 i
+      div(class="reserve-room-card__price-info-2-3 js-reserve-room-card__price-info-2-3")
+      div(class="reserve-room-card__price-info-3-1 js-reserve-room-card__price-info-3-1")
+      div.reserve-room-card__price-info-3-2 i
+      div(class="reserve-room-card__price-info-3-3 js-reserve-room-card__price-info-3-3")
+    div.reserve-room-card__fin
+      div.reserve-room-card__fin-text Итого
+      div.reserve-room-card__fin-ellipsis 
+      div(class="reserve-room-card__fin-price js-reserve-room-card__fin-price")
+    div.reserve-room-card__button
+      +button({hasArrow: true})
+

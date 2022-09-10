@@ -1,0 +1,82 @@
+@import 'shared/styles/colors.scss';
+
+.header {
+  width: 1440px;
+  height: min-content;
+  padding: 15px 140px 15px 140px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  > :not(:first-child) {
+    margin-left: 20px;
+  }
+
+  &__logo {
+    flex-grow: 1;
+  }
+  &__about-us {
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $color-dark-shade-75;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__services,
+  &__vacancy,
+  &__news,
+  &__agreements {
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $color-dark-shade-50;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__services {
+    &-arrow {
+      padding: 0 6px 0 6px;
+      transform: scaleY(-1);
+    }
+    &_opened &-arrow {
+      transform: scaleY(1);
+    }
+  }
+
+  &__agreements {
+    &-arrow {
+      padding: 0 6px 0 6px;
+      transform: scaleY(-1);
+    }
+    &_opened &-arrow {
+      transform: scaleY(1);
+    }
+  }
+
+  &__button {
+    &-enter {
+      height: 34px;
+    }
+    &-register {
+      height: 34px;
+    }
+  }
+
+  &__separator {
+    width: 1px;
+    height: 30px;
+    background: $color-dark-shade-10;
+  }
+  &__user-name {
+    white-space: nowrap;
+    color: $color-dark-shade-50;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

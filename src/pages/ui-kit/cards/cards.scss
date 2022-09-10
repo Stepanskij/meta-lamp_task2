@@ -7,11 +7,21 @@
   &__colum-1,
   &__colum-2,
   &__colum-3 {
-    & > * {
-      background: #ffffff;
-      border: 0.0625rem solid rgba(0, 0, 0, 0.12);
-      box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
-      border-radius: 0.25rem;
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
+    & > *:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  &__calendar {
+    border: none;
+    margin-top: -5px;
+    > :first-child {
+      > :first-child {
+        display: none;
+      }
     }
   }
 }

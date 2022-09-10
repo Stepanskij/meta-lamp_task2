@@ -1,0 +1,35 @@
+include ../text-field/text-field.pug
+include ../radio-buttons/radio-buttons.pug
+include ../title/title.pug
+include ../masked-text-field/masked-text-field.pug
+include ../toggle/toggle.pug
+include ../button/button.pug
+
+mixin account-registration-card(props = {})  
+  -
+    const {
+    } = props;
+
+  div.account-registration-card
+    div.account-registration-card__title Регистрация аккаунта
+    div.account-registration-card__text-fields-name
+      +text-field({placeholder:"Имя", type:"text"})
+      +text-field({placeholder:"Фамилия", type:"text"})
+      +radio-buttons({name:"gender", callNumber:1,
+        list:[{isChecked: true, text: "Мужчина"},
+        {isChecked: false, text: "Женщина"},
+        ],}) 
+    div(class="account-registration-card__date-of-birth js-account-registration-card__date-of-birth")
+      +title({titleName:"Дата рождения"})
+      +masked-text-field()
+    div.account-registration-card__data-for-logging
+      +title({titleName:"данные для входа в сервис"})
+      +text-field({placeholder:"Email", type:"email"})
+      +text-field({placeholder:"Пароль", type:"password"})
+      +toggle({text:"Получать спецпредложения"})
+    div.account-registration-card__go-to-payment
+      +button({children : "перейти к оплате",
+      hasArrow : true,})
+    div.account-registration-card__enter
+      div.account-registration-card__enter-text  Уже есть аккаунт на Toxin 
+      +button({children : "Войти", isOutlined:true})

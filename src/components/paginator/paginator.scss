@@ -14,13 +14,6 @@
       &[class$='ellipsis'] {
         cursor: auto;
       }
-      &.-focus- {
-        background: linear-gradient(rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
-      }
-      &.-hide- {
-        min-width: 0;
-        max-width: 0;
-      }
     }
   }
 
@@ -36,6 +29,24 @@
     &-left,
     &-right {
       background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      &_hide {
+        min-width: 0;
+        max-width: 0;
+      }
+    }
+  }
+
+  &__first-page,
+  &__ellipsis,
+  &__pre-page,
+  &__post-page,
+  &__last-page {
+    &_focus {
+      background: linear-gradient(rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25));
+    }
+    &_hide {
+      min-width: 0;
+      max-width: 0;
     }
   }
 

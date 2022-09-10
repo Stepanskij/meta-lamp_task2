@@ -1,8 +1,11 @@
 extends ../../layout/layout-ui-kit.pug
 
-include ../../../components/chose-room/chose-room.pug
-include ../../../components/account-registration/account-registration.pug
-
+include ../../../components/chose-room-card/chose-room-card.pug
+include ../../../components/account-registration-card/account-registration-card.pug
+include ../../../components/enter-card/enter-card.pug
+include ../../../components/reserve-room-card/reserve-room-card.pug
+include ../../../components/date-dropdown-card/date-dropdown-card.pug
+include ../../../components/room-show-card/room-show-card.pug
 
 block title
   title Cards 
@@ -10,9 +13,19 @@ block content
 
   div.cards
     div.cards__colum-1
-      div.cards__chose-room
-        +chose-room()
-      div.cards__account-registration
-        +account-registration()
+      div(class="cards__chose-room-card js-cards__chose-room-card")
+        +chose-room-card()
+      div(class="cards__account-registration-card js-cards__account-registration-card")
+        +account-registration-card()
     div.cards__colum-2
+      div(class="cards__reserve-room-card js-cards__reserve-room-card")
+        +reserve-room-card()
+      div.cards__enter-card
+        +enter-card()
     div.cards__colum-3
+      div(class="cards__calendar js-cards__calendar")
+        +date-dropdown-card()
+      div(class="cards__room-show-card js-cards__room-show-card")
+        +room-show-card()
+      div(class="cards__room-show-card js-cards__room-show-card")
+        +room-show-card()

@@ -1,0 +1,19 @@
+include ../divided-date-dropdown-card/divided-date-dropdown-card.pug
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+include ../title/title.pug
+
+mixin chose-room-card(props = {})
+	-
+		const {
+		} = props;
+
+	div.chose-room-card
+		div.chose-room-card__title Найдём номера под ваши пожелания
+		div(class="chose-room-card__dates js-chose-room-card__dates")
+			+divided-date-dropdown-card({textTitle1:"Прибытие",textTitle2: "Выезд",})
+		div(class="chose-room-card__guests js-chose-room-card__guests")
+			+title({titleName:"Гости"})
+			+dropdown({hasButtons:true})
+		div.chose-room-card__button
+			+button({children:"Подобрать номер",hasArrow:true})

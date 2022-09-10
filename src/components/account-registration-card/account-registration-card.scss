@@ -1,0 +1,62 @@
+@import 'shared/styles/colors.scss';
+
+.account-registration-card {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+
+  [class='title'] {
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-dark-shade-100;
+  }
+
+  &__text-fields-name {
+    > :not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__date-of-birth {
+    margin-top: 24px;
+  }
+
+  &__data-for-logging {
+    margin-top: 20px;
+    > :not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__go-to-payment {
+    height: 44px;
+    margin-top: 38px;
+  }
+
+  &__enter {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > :last-child {
+      height: 44px;
+    }
+
+    &_text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

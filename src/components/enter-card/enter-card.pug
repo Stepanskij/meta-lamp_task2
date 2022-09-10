@@ -1,0 +1,17 @@
+
+
+mixin enter-card(props = {})  
+	-
+		const {
+		} = props;
+
+	div.enter-card
+		div.enter-card__title Войти
+		div.enter-card__text-fields-registration
+			+text-field({placeholder:"Email", type:"email"})
+			+text-field({placeholder:"Пароль", type:"password"})
+		div.enter-card__button
+			+button({children : "Войти",hasArrow : true,})
+		div.enter-card__enter
+			div.enter-card__enter-text  Нет аккаунт на Toxin 
+			+button({children : "Создать", isOutlined:true})

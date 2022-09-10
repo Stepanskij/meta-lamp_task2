@@ -2,7 +2,7 @@
 
 .button {
   width: min-content;
-  height: min-content;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,8 +10,8 @@
 
   &__native-element {
     cursor: pointer;
-    width: 6.1875rem;
-    height: 2.75rem;
+    width: min-content;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,16 +28,18 @@
   }
 
   &__text {
+    padding: 0 20px 0 20px;
+    white-space: nowrap;
     user-select: none;
     font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
   }
 
   &_hollow &__native-element &__native-element {
-    width: calc(100%-0.25rem);
-    height: calc(100%-0.25rem);
+    width: calc(100%-4px);
+    height: calc(100%-4px);
     background-color: white;
     background-image: none;
   }

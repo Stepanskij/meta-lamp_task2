@@ -1,0 +1,7 @@
+@import 'shared/styles/colors.scss';
+
+.headers-and-footers {
+  > :not(:first-child) {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,18 @@
+extends ../../layout/layout-ui-kit.pug
+
+include ../../../components/header/header.pug
+include ../../../components/footer/footer.pug
+
+block title
+  title Headers & Footers 
+block content
+
+  div.headers-and-footers
+    div(class="headers-and-footers__header-none-registration js-headers-and-footers__header-none-registration")
+      +header()
+    div(class="headers-and-footers__header-is-registration js-headers-and-footers__header-is-registration")
+      +header({registration:true})
+    div.headers-and-footers__footer-web-page
+      +footer()
+    div.headers-and-footers__footer-mobile
+      +footer({isMobileVersion: true})

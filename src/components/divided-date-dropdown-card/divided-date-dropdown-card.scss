@@ -1,0 +1,72 @@
+@import 'shared/styles/colors.scss';
+
+.divided-date-dropdown-card {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-column-gap: 1.25rem;
+
+  &__title {
+    &-1,
+    &-2 {
+      margin-bottom: 0.3125rem;
+      font-weight: 700;
+      font-size: 0.75rem;
+      line-height: 0.9375rem;
+      color: $color-dark-shade-100;
+      text-transform: uppercase;
+    }
+  }
+
+  &__container {
+    width: 9.375rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.0625rem solid $color-dark-shade-25;
+    border-radius: 0.25rem;
+    &:hover {
+      border-color: $color-dark-shade-50;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      width: 12.9375rem;
+      height: 2.75rem;
+      margin-left: 0.9375rem;
+      font-weight: 400;
+      line-height: 1.5rem;
+      color: $color-dark-shade-75;
+    }
+
+    &-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      min-width: 2.75rem;
+      height: 2.75rem;
+      transform: scaleY(-1);
+      &_is-opened {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  &__calendar-container {
+    position: absolute;
+    width: min-content;
+    max-height: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;  
+    margin-top: 4.3125rem;    
+    overflow: hidden;
+    z-index: 1;
+    transition: max-height 0.3s;
+    &_is-opened {
+      max-height: 23.125rem;
+    }
+  }
+}

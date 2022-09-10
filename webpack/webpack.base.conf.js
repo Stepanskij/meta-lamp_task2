@@ -12,7 +12,8 @@ const PATHS = {
 const pages = [
   { pageName: 'colors-and-fonts', pageType: 'ui-kit' },
   { pageName: 'form-elements', pageType: 'ui-kit' },
-  { pageName: 'cards', pageType: 'ui-kit' },
+  { pageName: 'cards', pageType: 'ui-kit' },  
+  { pageName: 'headers-and-footers', pageType: 'ui-kit' },
   { pageName: 'room-details', pageType: 'web-pages' },
 ];
 

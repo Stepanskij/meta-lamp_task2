@@ -1,0 +1,28 @@
+include ../button/button.pug
+
+mixin header(props = {})
+  -
+    const {
+      registration = false,
+    } = props;
+
+  div.header
+    div.header__logo
+      img.header__logo-img(src="../../assets/img/logo-toxin.svg")
+    a.header__about-us(href="https://www.error.com/") О Нас 
+    div(class="header__services js-header__services")
+      span.header__services-text Услуги
+      img(class="header__services-arrow js-header__services-arrow" src="../../assets/img/expand-arrow-dark-75.svg")
+    a.header__vacancy(href="https://www.error.com/") Вакансии
+    a.header__news(href="https://www.error.com/") Новости
+    div.header__agreements(class="header__agreements js-header__agreements")
+      span.header__agreements-text Соглашения
+      img(class="header__agreements-arrow js-header__agreements-arrow" src="../../assets/img/expand-arrow-dark-75.svg")
+    - if (registration) 
+      div.header__separator
+      div.header__user-name Юлий Цезарь
+    - else
+      div.header__button-enter
+        +button({children : "Войти", isOutlined:true})
+      div.header__button-register        
+        +button({children : "Зарегистрироваться"})

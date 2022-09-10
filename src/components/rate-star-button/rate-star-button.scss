@@ -1,0 +1,11 @@
+@import 'shared/styles/colors.scss';
+
+.rate-star-button {
+  display: flex;
+  user-select: none;
+
+  &__mark {
+    cursor: pointer;
+    padding: 2.5px 2px 2.5px 2px;
+  }
+}

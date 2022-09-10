@@ -1,0 +1,35 @@
+@import 'shared/styles/colors.scss';
+
+.chose-room-card {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+
+  &__title {
+    margin-bottom: 21px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-dark-shade-100;
+  }
+
+  &__dates {
+    margin-bottom: 21px;
+  }
+
+  &__guests {
+    margin-bottom: 31px;
+    & > :first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__button {
+    height: 44px;
+  }
+}

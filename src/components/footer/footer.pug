@@ -1,0 +1,58 @@
+include ../text-field/text-field.pug
+
+mixin footer(props = {})
+  -
+    const {
+      isMobileVersion = false,
+    } = props;
+
+  div.footer
+    - if (isMobileVersion)
+      div.footer__mobile
+        div.footer__mobile-logo
+          img.footer__mobile-logo-img(src="../../assets/img/logo-toxin.svg")
+        div.footer__mobile-text Copyright © 2018 Toxin отель. Все права защищены.
+        div.footer__mobile-social-media      
+          a(class="footer__mobile-social-media-link" href="https://twitter.com")
+            img(class="footer__mobile-social-media-image" src=`../../assets/img/twitter-icon.svg`)
+          a(class="footer__mobile-social-media-link" href="https://facebook.com")
+            img(class="footer__mobile-social-media-image" src=`../../assets/img/facebook-icon.svg`)
+          a(class="footer__mobile-social-media-link" href="https://instagram.com")
+            img(class="footer__mobile-social-media-image" src=`../../assets/img/instagram-icon.svg`)
+    - else
+      div.footer__part-1
+        div.footer__colum-1
+          div.footer__logo
+            img.footer__logo-img(src="../../assets/img/logo-toxin.svg")
+          span.footer__logo-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        div.footer__colum-2
+          div.footer__colum-title Навигация
+          a.footer__colum-link(href="https://www.error.com/") О нас
+          a.footer__colum-link(href="https://www.error.com/") Новости
+          a.footer__colum-link(href="https://www.error.com/") Служба поддержки
+          a.footer__colum-link(href="https://www.error.com/") Услуги
+        div.footer__colum-3
+          div.footer__colum-title О нас
+          a.footer__colum-link(href="https://www.error.com/") О сервисе
+          a.footer__colum-link(href="https://www.error.com/") Наша команда
+          a.footer__colum-link(href="https://www.error.com/") Вакансии
+          a.footer__colum-link(href="https://www.error.com/") Инвесторы
+        div.footer__colum-4
+          div.footer__colum-title Служба подджержки
+          a.footer__colum-link(href="https://www.error.com/") Соглашения
+          a.footer__colum-link(href="https://www.error.com/") Сообщества
+          a.footer__colum-link(href="https://www.error.com/") Связь с нами
+        div.footer__colum-5
+          div.footer__colum-title Подписка
+          div.footer__colum-text Получайте специальные предложения и новости сервиса
+          div.footer__colum-subscription-text-field
+            +text-field({placeholder: "Email", type: "email", hasSubmitButton: true})
+      div.footer__part-2
+        div.footer__text Copyright © 2018 Toxin отель. Все права защищены.
+        div.footer__social-media      
+          a(class="footer__social-media-link" href="https://twitter.com")
+            img(class="footer__social-media-image" src=`../../assets/img/twitter-icon.svg`)
+          a(class="footer__social-media-link" href="https://facebook.com")
+            img(class="footer__social-media-image" src=`../../assets/img/facebook-icon.svg`)
+          a(class="footer__social-media-link" href="https://instagram.com")
+            img(class="footer__social-media-image" src=`../../assets/img/instagram-icon.svg`)

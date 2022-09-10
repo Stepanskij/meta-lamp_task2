@@ -1,0 +1,34 @@
+include ../rate-star-button/rate-star-button.pug
+
+mixin room-show-card(props = {})
+  -
+    const {
+    } = props;
+
+  div.room-show-card
+    div(class=`room-show-card__photos-scroll js-room-show-card__photos-scroll`)
+      div.room-show-card__photos
+        -for(let i=1;i<=4;i++)
+          img(class=`room-show-card__photo js-room-show-card__photo`)
+      div.room-show-card__arrow-buttons
+        div(class="room-show-card__button-back js-room-show-card__button-back")
+          img.room-show-card__arrow-back(src="../../assets/img/arrow-room-show-card-left.svg")
+        div(class="room-show-card__button-forward js-room-show-card__button-forward")
+          img.room-show-card__arrow-forward(src="../../assets/img/arrow-room-show-card-left.svg")
+      div.room-show-card__radio-buttons
+        -for(let i=1;i<=4;i++)
+          div(class=`room-show-card__radio-button js-room-show-card__radio-button` data-index=`${i}`)
+
+    div.room-show-card__info-text
+      div.room-show-card__info-text-title
+        span.room-show-card__info-text-title-room-number-symbol №	
+        span(class="room-show-card__info-text-title-room-number js-room-show-card__info-text-title-room-number")
+        span(class="room-show-card__info-text-title-room-class js-room-show-card__info-text-title-room-class")
+        span(class="room-show-card__info-text-title-room-price js-room-show-card__info-text-title-room-price")
+        span.room-show-card__info-text-title-room-price-period в сутки
+      div.room-show-card__info-text-separator
+      div.room-show-card__info-text-bottom
+        div(class="room-show-card__info-text-rate-star-button js-room-show-card__info-text-rate-star-button")
+          +rate-star-button()
+        div(class="room-show-card__info-text-feedback-number js-room-show-card__info-text-feedback-number")
+        div(class="room-show-card__info-text-feedback-text js-room-show-card__info-text-feedback-text")

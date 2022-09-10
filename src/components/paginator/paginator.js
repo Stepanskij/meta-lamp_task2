@@ -52,18 +52,33 @@ class Paginator {
       element.textContent = this.selectedPage + 1 + index;
     });
 
-    this.DOMArrowLeft.classList.toggle('-hide-', this.selectedPage === 1);
-    this.DOMArrowRight.classList.toggle('-hide-', this.selectedPage === this.numberPages);
+    this.DOMArrowLeft.classList.toggle(this.DOMArrowLeft.classList[0] + '_hide', this.selectedPage === 1);
+    this.DOMArrowRight.classList.toggle(
+      this.DOMArrowRight.classList[0] + '_hide',
+      this.selectedPage === this.numberPages,
+    );
 
-    this.DOMFirstPage.classList.toggle('-hide-', this.selectedPage < 1 + 3);
-    this.DOMEllipsis[0].classList.toggle('-hide-', this.selectedPage < 1 + 4);
-    this.DOMPrePages[0].classList.toggle('-hide-', this.selectedPage < 3);
-    this.DOMPrePages[1].classList.toggle('-hide-', this.selectedPage < 2);
+    this.DOMFirstPage.classList.toggle(this.DOMFirstPage.classList[0] + '_hide', this.selectedPage < 1 + 3);
+    this.DOMEllipsis[0].classList.toggle(this.DOMEllipsis[0].classList[0] + '_hide', this.selectedPage < 1 + 4);
+    this.DOMPrePages[0].classList.toggle(this.DOMPrePages[0].classList[0] + '_hide', this.selectedPage < 3);
+    this.DOMPrePages[1].classList.toggle(this.DOMPrePages[1].classList[0] + '_hide', this.selectedPage < 2);
 
-    this.DOMLastPage.classList.toggle('-hide-', this.selectedPage > this.numberPages - 3);
-    this.DOMEllipsis[1].classList.toggle('-hide-', this.selectedPage > this.numberPages - 4);
-    this.DOMPostPages[0].classList.toggle('-hide-', this.selectedPage > this.numberPages - 1);
-    this.DOMPostPages[1].classList.toggle('-hide-', this.selectedPage > this.numberPages - 2);
+    this.DOMLastPage.classList.toggle(
+      this.DOMLastPage.classList[0] + '_hide',
+      this.selectedPage > this.numberPages - 3,
+    );
+    this.DOMEllipsis[1].classList.toggle(
+      this.DOMEllipsis[1].classList[0] + '_hide',
+      this.selectedPage > this.numberPages - 4,
+    );
+    this.DOMPostPages[0].classList.toggle(
+      this.DOMPostPages[0].classList[0] + '_hide',
+      this.selectedPage > this.numberPages - 1,
+    );
+    this.DOMPostPages[1].classList.toggle(
+      this.DOMPostPages[1].classList[0] + '_hide',
+      this.selectedPage > this.numberPages - 2,
+    );
 
     this._changeInfoText();
   };
@@ -84,7 +99,7 @@ class Paginator {
   };
 
   _focus = eventObj => {
-    eventObj.srcElement.classList.toggle('-focus-');
+    eventObj.srcElement.classList.toggle(eventObj.srcElement.classList[0] + '_focus');
   };
 
   _onHover = () => {
@@ -115,7 +130,7 @@ class Paginator {
     }
     this.infoText += ` из ${this.numberOfChoices > 100 ? '100+' : this.numberOfChoices} `;
     this.infoText += this._checkConjugation(this.conjugations, this.numberOfChoices > 100 ? 100 : this.numberOfChoices);
-    this.infoText += " аренды"
+    this.infoText += ' аренды';
 
     this.DOMInfoText.textContent = this.infoText;
   };

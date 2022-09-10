@@ -100,7 +100,7 @@
     }
   }
 
-  &__date-dropdown {
+  &__date-dropdown-card {
   }
 
   &__checkbox-buttons {
@@ -122,7 +122,7 @@
     }
   }
 
-  &__rate-button {
+  &__rate-star-button {
     &_group {
       display: flex;
       > :last-child {
@@ -133,12 +133,14 @@
 
   &__buttons {
     &_group-1 {
+      height: 44px;
       display: flex;
       & div:first-child {
         margin-right: 1.25rem;
       }
     }
     &_group-2 {
+      height: 44px;
       display: flex;
       margin-top: 1.875rem;
       & div:first-child {
@@ -146,6 +148,7 @@
       }
     }
     &_group-3 {
+      height: 44px;
       display: flex;
       margin-top: 1.875rem;
       & div:first-child {
@@ -153,6 +156,7 @@
       }
     }
     &_group-4 {
+      height: 44px;
       display: flex;
       min-width: 20rem;
       margin-top: 1.875rem;
@@ -161,5 +165,17 @@
 
   &__dropdown {
     width: min-content;
+  }
+
+  &__rate-star-buttons {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content;
+    column-gap: 20px;
+
+    :first-child {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 }

@@ -1,0 +1,19 @@
+mixin divided-date-dropdown-card(props = {})
+  -
+    const {
+      textTitle1 = "date dropdown",
+      textTitle2 = "date dropdown",
+    } = props;
+
+  div.divided-date-dropdown-card   
+    div.divided-date-dropdown-card__title-1= textTitle1
+    div.divided-date-dropdown-card__title-2= textTitle2
+    div(class="divided-date-dropdown-card__container js-divided-date-dropdown-card__container")      
+      span(class="divided-date-dropdown-card__container-text js-divided-date-dropdown-card__container-text" ) ДД.ММ.ГГГГ
+      div(class="divided-date-dropdown-card__container-arrow js-divided-date-dropdown-card__container-arrow")
+        img.divided-date-dropdown-card__arrow-img(src="../../assets/img/expand-arrow-dark-75.svg")       
+    div(class="divided-date-dropdown-card__container js-divided-date-dropdown-card__container")      
+      span(class="divided-date-dropdown-card__container-text js-divided-date-dropdown-card__container-text" ) ДД.ММ.ГГГГ
+      div(class="divided-date-dropdown-card__container-arrow js-divided-date-dropdown-card__container-arrow")
+        img.divided-date-dropdown-card__arrow-img(src="../../assets/img/expand-arrow-dark-75.svg")         
+    div(class="divided-date-dropdown-card__calendar-container js-divided-date-dropdown-card__calendar-container")

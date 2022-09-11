@@ -19,12 +19,12 @@
     &-room-number-symbol {
       font-family: Quicksand, sans-serif;
       font-weight: 700;
-      font-size: 14px;
-      line-height: 17.5px;
+      font-size: 0.875rem;
+      line-height: 1.0938rem;
       color: $color-dark-shade-100;
     }
     &-room-number {
-      margin-left: 3px;
+      margin-left: 0.1875rem;
       font-weight:700;
       font-size: 1.5rem;
       line-height: 1.4375rem;
@@ -64,8 +64,8 @@
   }
 
   &__price-info {
-    margin-top: 21px;
-    margin-bottom: 30px;
+    margin-top: 1.3125rem;
+    margin-bottom: 1.875rem;
     display: grid;
     grid-template-columns: 13.75rem auto auto;
     grid-template-rows: auto auto auto;
@@ -142,12 +142,12 @@
     &-ellipsis {
       margin-bottom: 0.3125rem;
       flex-grow: 1;
-      border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+      border-bottom: 0.0625rem dashed rgba(31, 32, 65, 0.25);
     }
   }
 
   &__button {    
-    height: 44px;
+    height: 2.75rem;
     margin-top: 1.5625rem;
   }
 }

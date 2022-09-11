@@ -1,8 +1,8 @@
 @import 'shared/styles/colors.scss';
 
 .room-details {
-  width: 1440px;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  width: 90rem;
+  border-bottom: 0.0625rem solid rgba(31, 32, 65, 0.25);
 
   &__photos {
     display: grid;
@@ -11,21 +11,21 @@
   }
   &__photo {
     &-1 {
-      width: 981px;
-      height: 485px;
+      width: 61.3125rem;
+      height: 30.3125rem;
       grid-row-start: 1;
       grid-row-end: 3;
       background-image: url(../../../shared/img/background-room-details-1.png);
       background-size: 100% auto;
     }
     &-2 {
-      width: 461px;
-      height: 243px;
+      width: 28.8125rem;
+      height: 15.1875rem;
       background-image: url(../../../shared/img/background-room-details-2.png);
     }
     &-3 {
-      width: 461px;
-      height: 243px;
+      width: 28.8125rem;
+      height: 15.1875rem;
       background-image: url(../../../shared/img/background-room-details-3.png);
     }
   }
@@ -33,26 +33,26 @@
   &__title {
     white-space: nowrap;
     font-weight: 700;
-    font-size: 19px;
-    line-height: 23px;
+    font-size: 1.1875rem;
+    line-height: 1.4375rem;
     color: $color-dark-shade-100;
     & + * {
-      margin-top: 20px;
+      margin-top: 1.25rem;
     }
   }
 
   &__info {
-    padding: 70px 0 70px 140px;
+    padding: 4.375rem 0 4.375rem 8.75rem;
     display: grid;
     grid-template-columns: min-content min-content min-content;
     grid-template-rows: min-content min-content min-content;
-    column-gap: 60px;
-    row-gap: 30px;
+    column-gap: 3.75rem;
+    row-gap: 1.875rem;
   }
 
   &__guest-reviews {
     > :not(:first-child) {
-      margin-top: 20px;
+      margin-top: 1.25rem;
     }
     grid-column-start: 1;
     grid-column-end: 3;
@@ -60,8 +60,8 @@
 
   &__cancel-text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
     color: $color-dark-shade-75;
   }
 

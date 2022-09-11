@@ -133,24 +133,24 @@
 
   &__buttons {
     > :not(:first-child) {
-      margin-top: 20px;
+      margin-top: 1.25rem;
     }
     &_group-1,
     &_group-2,
     &_group-3 {
-      height: 44px;
+      height: 2.75rem;
       display: flex;
       & div:first-child {
         margin-right: 1.25rem;
       }
       > * {
-        width: 99px;
+        width: 6.1875rem;
       }
     }
 
     &_group-4 {
-      width: 320px;
-      height: 44px;
+      width: 20rem;
+      height: 2.75rem;
       display: flex;
       min-width: 20rem;
       margin-top: 1.875rem;
@@ -165,7 +165,7 @@
     display: grid;
     grid-template-columns: min-content min-content;
     grid-template-rows: min-content min-content;
-    column-gap: 20px;
+    column-gap: 1.25rem;
 
     :first-child {
       grid-column-start: 1;

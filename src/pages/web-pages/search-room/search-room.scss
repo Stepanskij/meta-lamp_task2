@@ -1,75 +1,75 @@
 @import 'shared/styles/colors.scss';
 
 .search-room {
-  width: 1440px;
-  padding: 30px 140px 70px 140px;
+  width: 90rem;
+  padding: 1.875rem 8.75rem 4.375rem 8.75rem;
   display: flex;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom: 0.0625rem solid rgba(31, 32, 65, 0.25);
 
   &__block {
     &-1 {
-      max-width: 266px;
+      max-width: 16.625rem;
       display: flex;
       flex-direction: column;
 
       & [class='title'] {
-        margin-bottom: 5px;
+        margin-bottom: 0.3125rem;
       }
     }
 
     &-2 {
-      margin-left: 60px;
+      margin-left: 3.75rem;
       display: flex;
       flex-direction: column;
     }
   }
 
   &__guests {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   &__price-range {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     display: flex;
     flex-direction: column;
 
     &-text {
-      margin-top: 10px;
+      margin-top: 0.625rem;
       font-weight: 400;
-      font-size: 12px;
-      line-height: 14px;
+      font-size: 0.75rem;
+      line-height: 0.875rem;
       color: $color-dark-shade-50;
     }
   }
 
   &__house-rules {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     [class='title'] {
-      margin-bottom: 16px;
+      margin-bottom: 1rem;
     }
   }
 
   &__room-amenities,
   &__additional-amenities {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
   &__title {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
     color: $color-dark-shade-100;
   }
   &__rooms {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     display: grid;
     grid-template-columns: min-content min-content min-content;
     grid-template-rows: min-content min-content min-content min-content;
-    row-gap: 20px;
-    column-gap: 12px;
+    row-gap: 1.25rem;
+    column-gap: 0.75rem;
   }
   &__paginator {
-    margin-top: 41px;
+    margin-top: 2.5625rem;
     align-self: center;
   }
 }

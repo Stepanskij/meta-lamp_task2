@@ -8,16 +8,16 @@
   &__colum-2,
   &__colum-3 {
     &:not(:first-child) {
-      margin-left: 40px;
+      margin-left: 2.5rem;
     }
     & > *:not(:first-child) {
-      margin-top: 40px;
+      margin-top: 2.5rem;
     }
   }
 
   &__calendar {
     border: none;
-    margin-top: -5px;
+    margin-top: -0.3125rem;
     > :first-child {
       > :first-child {
         display: none;

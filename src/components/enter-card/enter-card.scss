@@ -1,8 +1,8 @@
 @import 'shared/styles/colors.scss';
 
 .enter-card {
-  width: 380px;
-  padding: 40px 30px 30px 30px;
+  width: 23.75rem;
+  padding: 2.5rem 1.875rem 1.875rem 1.875rem;
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -11,42 +11,42 @@
   border-radius: 0.25rem;
 
   [class='title'] {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
     color: $color-dark-shade-100;
   }
 
   &__text-fields-registration {
     > :not(:first-child) {
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
   }
 
   &__button {
-    height: 44px;
-    margin-top: 20px;
+    height: 2.75rem;
+    margin-top: 1.25rem;
   }
 
   &__enter {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     > :last-child {
-      width: 99px;
-      height: 44px;
+      width: 6.1875rem;
+      height: 2.75rem;
     }
 
     &_text {
       font-weight: 400;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
     }
   }
 }

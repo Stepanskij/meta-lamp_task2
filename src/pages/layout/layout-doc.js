@@ -7,4 +7,4 @@ import '../../components/button';
 import Header from '../../components/header/header.js';
 //
 const header = document.querySelector('.js-layout__header');
-new Header(header);
+if (header) new Header(header);

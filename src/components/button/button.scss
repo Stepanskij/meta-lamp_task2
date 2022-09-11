@@ -31,14 +31,14 @@
     white-space: nowrap;
     user-select: none;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
     text-transform: uppercase;
   }
 
   &_hollow &__native-element &__native-element {
-    width: calc(100%-4px);
-    height: calc(100%-4px);
+    width: calc(100%-0.25rem);
+    height: calc(100%-0.25rem);
     background-color: white;
     background-image: none;
   }

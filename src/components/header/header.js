@@ -6,21 +6,27 @@ class Header {
     this._setEventHandlers();
   }
   _initialization = () => {
-    this.DOMServices = this.outerContainerElement.querySelector('.js-header__services');
+    this.DOMServicesText = this.outerContainerElement.querySelector('.js-header__services-text');
     this.DOMServicesArrow = this.outerContainerElement.querySelector('.js-header__services-arrow');
+    this.DOMServicesList = this.outerContainerElement.querySelector('.js-header__services-list');
 
-    this.DOMAgreements = this.outerContainerElement.querySelector('.js-header__agreements');
+    this.DOMAgreementsText = this.outerContainerElement.querySelector('.js-header__agreements-text');
     this.DOMAgreementsArrow = this.outerContainerElement.querySelector('.js-header__agreements-arrow');
+    this.DOMAgreementsList = this.outerContainerElement.querySelector('.js-header__agreements-list');
   };
 
   _setEventHandlers = () => {
-    this.DOMServices.addEventListener('click', this._changeArrow);
-    this.DOMAgreements.addEventListener('click', this._changeArrow);
+    this.DOMServicesText.addEventListener('click', this._changeArrow);
+    this.DOMServicesText.addEventListener('click', this._changeList);
+    this.DOMServicesArrow.addEventListener('click', this._changeArrow);
+
+    this.DOMAgreementsText.addEventListener('click', this._changeArrow);
+    this.DOMAgreementsText.addEventListener('click', this._changeList);
+    this.DOMAgreementsArrow.addEventListener('click', this._changeArrow);
   };
 
   _changeArrow = eventObj => {
     eventObj.srcElement.parentElement.classList.toggle(`${eventObj.srcElement.parentElement.classList[0]}_opened`);
-    console.log(eventObj)
   };
 }
 

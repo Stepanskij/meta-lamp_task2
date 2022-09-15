@@ -3,7 +3,7 @@
 .comment {
   display: grid;
   grid-template: min-content min-content/min-content max-content;
-  gap: 0.625rem;
+  gap: 9px;
 
   &__photo-img {
     border-radius: 2rem;
@@ -12,6 +12,7 @@
   }
 
   &__info {
+    margin-left: -1px;
     display: flex;
     flex-direction: column;
     color: $color-dark-shade-75;
@@ -20,6 +21,7 @@
   &__name {
     font-weight: 700;
     line-height: 1.5rem;
+    letter-spacing: 0.3px;
   }
 
   &__date-registration {
@@ -33,6 +35,7 @@
   }
 
   &__text {
+    margin-top: -2px;
     width: 40.8125rem;
     font-weight: 400;
     font-size: 0.875rem;

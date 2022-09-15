@@ -4,7 +4,6 @@
 .footer {
   &__part {
     &-1 {
-      width: 90rem;
       display: flex;
       justify-content: space-between;
       padding: 6.25rem 8.75rem 6.25rem 8.75rem;
@@ -16,18 +15,18 @@
     }
 
     &-2 {
-      width: 90rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.4375rem 8.75rem 1.4375rem 8.75rem;
+      padding: 25px 8.75rem 1.4375rem 8.75rem;
       box-shadow: 0rem 0.625rem 1.25rem $color-dark-shade-5;
     }
   }
 
   &__logo {
+    display: flex;
     &-text {
-      margin-top: 1.25rem;
+      margin-top: 16px;
       font-weight: 400;
       font-size: 0.875rem;
       line-height: 1.5rem;
@@ -37,17 +36,20 @@
 
   &__colum {
     &-1 {
-      width: 16.25rem;
+      width: 260px;
     }
+
     &-2,
     &-3,
     &-4 {
+      margin-top: 3px;
       white-space: nowrap;
       > :not(:first-child) {
-        margin-top: 1.25rem;
+        margin-top: 21px;
       }
     }
     &-5 {
+      margin-top: 3px;
       width: 16.25rem;
       > :not(:first-child) {
         margin-top: 1.25rem;
@@ -88,8 +90,20 @@
   }
 
   &__social-media {
+    display: flex;
+
     > :not(:first-child) {
       margin-left: 1.25rem;
+    }
+
+    &-link {
+      display: flex;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    &-image {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 
@@ -101,6 +115,7 @@
     background: #ffffff;
     box-shadow: 0rem 0.625rem 1.25rem $color-dark-shade-5;
     &-logo {
+      display: flex;
       &-text {
         margin-top: 1.25rem;
         font-weight: 400;

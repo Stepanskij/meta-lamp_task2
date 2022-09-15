@@ -8,18 +8,17 @@
 
   &__checkbox {
     display: flex;
-    & > :last-child {
-      margin-left: 0.625rem;
-    }
+   
   }
   &__checkbox + &__checkbox {
-    margin-top: 0.625rem;
+    margin-top: 11px;
   }
   &__additional-text + &__checkbox {
     margin-top: 0.625rem;
   }
 
   &__label {
+    cursor: pointer;
     display: flex;
     user-select: none;
   }
@@ -31,7 +30,6 @@
   }
 
   &__checkbox-mark {
-    cursor: pointer;
     width: $checkbox-size;
     height: $checkbox-size;
     display: flex;
@@ -54,18 +52,20 @@
   }
 
   &__text {
+    margin-left: 0.625rem;
     line-height: 1.125rem;
     color: $color-dark-shade-50;
     &_rich {
       font-weight: 700;
       color: $color-dark-shade-75;
+      letter-spacing: 0.3px;
     }
   }
 
   &__additional-text {
-    width: 14.375rem;
-    margin-left: 1.875rem;
-    margin-top: 0.3125rem;
+    width: 230px;
+    margin-left: 30px;
+    margin-top: 4px;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 0.875rem;

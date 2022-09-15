@@ -80,7 +80,7 @@
   }
 
   &__info-text {
-    width: 16.875rem;
+    width: 272px;
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
@@ -92,22 +92,22 @@
       white-space: nowrap;
 
       &-room-number-symbol {
-        margin-right: 0.1875rem;
-        font-family: Quicksand, sans-serif;
-        font-weight: bold;
-        font-size: 0.875rem;
-        line-height: 0.9375rem;
-        color: $color-dark-shade-100;
-      }
-      &-room-number {
         font-family: Quicksand, sans-serif;
         font-weight: 700;
-        font-size: 0.9375rem;
+        font-size: 14px;
         line-height: 1.0938rem;
         color: $color-dark-shade-100;
       }
+      &-room-number {
+        margin-left: 5px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.4375rem;
+        color: $color-dark-shade-100;
+        letter-spacing: 0.5px;
+      }
       &-room-class {
-        margin-left: 0.0625rem;
+        margin-left: 4px;
         font-weight: 700;
         font-size: 0.75rem;
         line-height: 0.9375rem;
@@ -120,6 +120,7 @@
         font-size: 0.875rem;
         line-height: 1.125rem;
         color: $color-dark-shade-50;
+        letter-spacing: 0.1px;
       }
       &-room-price-period {
         margin-left: 0.25rem;
@@ -131,11 +132,12 @@
 
     &-separator {
       height: 0.0625rem;
-      margin: 0.625rem 0 0.5rem 0;
+      margin: 12px 0 6px 0;
       background: $color-dark-shade-10;
     }
 
     &-bottom {
+      margin-top: 3px;
       display: flex;
       align-items: center;
     }
@@ -150,7 +152,8 @@
       color: $color-dark-shade-50;
     }
     &-feedback-text {
-      margin-left: 0.25rem;
+      margin-right: 2px;
+      margin-left: 4px;
       font-size: 0.875rem;
       line-height: 1.125rem;
       color: $color-dark-shade-50;

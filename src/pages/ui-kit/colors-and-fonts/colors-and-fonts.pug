@@ -16,10 +16,10 @@ mixin colors-list(props = {})
 
   - for(let obj of objs)
     div.color-and-fonts__color-type
-      div(class= `color-and-fonts__color-square color-and-fonts__color-square_color_${obj.color}`)
+      div(class= `color-and-fonts__color-square color-and-fonts__color-square_color-${obj.color}`)
       div(class= `color-and-fonts__square-text`)
-        div(class= `color-and-fonts__square-text_top`)= obj.textTop
-        div(class= `color-and-fonts__square-text_bottom`)= obj.textBottom
+        div(class= `color-and-fonts__square-text-top`)= obj.textTop
+        div(class= `color-and-fonts__square-text-bottom`)= obj.textBottom
 
 mixin fonts-list(objFonts = {})
   -
@@ -30,14 +30,11 @@ mixin fonts-list(objFonts = {})
         { typeText: "H3", text: 'This is a label or CTA text'},
         { typeText: "Body", text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'},        
       ]
-    } = objFonts;
-
-
+    } = objFonts; 
 
   - for(let obj of objs)
-    div.color-and-fonts__font-type
-      div(class= `color-and-fonts__font-type_paragraph color-and-fonts__font-type_paragraph-type_${obj.typeText}`)= obj.typeText
-      div(class= `color-and-fonts__font-type_text color-and-fonts__font-type_text-type_${obj.typeText}`)= obj.text
+    div(class= `color-and-fonts__font-type-paragraph color-and-fonts__font-type-paragraph_type-${obj.typeText}`)= obj.typeText
+    div(class= `color-and-fonts__font-type-text color-and-fonts__font-type-text_type-${obj.typeText}`)= obj.text
 
 block title
   title Colors & Fonts 

@@ -2,18 +2,21 @@
 
 .form-elements {
   width: 71.25rem;
-  padding: 0 9.375rem 0 9.375rem;
+  padding: 0 141px 0 141px;
+  margin-top: 62px;
   display: grid;
   grid-template-columns: min-content min-content min-content;
   grid-template-rows: min-content min-content min-content min-content;
-  grid-column-gap: 7.875rem;
-  grid-row-gap: 6.25rem;
+
+  & [class='title'] {
+    margin-bottom: 4px;
+  }
 
   &__grid {
     &-1 {
       &-1 {
         & [class='title'] {
-          margin-bottom: 0.3125rem;
+          margin-bottom: 4px;
         }
         & > :not(:first-child) {
           margin-top: 1.25rem;
@@ -21,6 +24,9 @@
       }
 
       &-2 {
+        margin-top: 3px;
+        margin-left: 126px;
+
         & [class='title'] {
           margin-bottom: 1rem;
         }
@@ -30,6 +36,9 @@
       }
 
       &-3 {
+        margin-top: 4px;
+        margin-left: 132px;
+
         & > :not(:first-child) [class='title'] {
           margin-bottom: 1rem;
         }
@@ -44,18 +53,30 @@
 
     &-2 {
       &-1 {
+        height: 266px;
+        margin-left: -1px;
+        margin-top: 102px;
         display: flex;
         flex-direction: column;
         & [class='title'] {
-          margin-bottom: 0.3125rem;
+          margin-bottom: 5px;
         }
         > :last-child {
           margin-top: 1.25rem;
         }
       }
 
+      &-2 {
+        margin-left: 126px;
+      }
+
+      &-3 {
+        margin-left: 72px;
+      }
+
       &-2,
       &-3 {
+        margin-top: 102px;
         & [class='title'] {
           margin-bottom: 0.3125rem;
         }
@@ -64,15 +85,31 @@
 
     &-3 {
       &-1 {
+        width: 250px;
+        height: 282px;
+        margin-top: 54px;
         display: flex;
         flex-direction: column;
         > :last-child {
-          margin-top: 1.25rem;
+          margin-top: 30px;
+        }
+      }
+
+      &-2 {
+        margin-left: 126px;
+      }
+
+      &-3 {
+        margin-left: 72px;
+
+        & [class='title'] {
+          margin-bottom: 12px !important;
         }
       }
 
       &-2,
       &-3 {
+        margin-top: 54px;
         & [class='title'] {
           margin-bottom: 1rem;
         }
@@ -81,9 +118,12 @@
 
     &-4 {
       &-1 {
+        margin-top: 85px;
       }
 
       &-2 {
+        margin-top: 95px;
+        margin-left: 127px;
         display: flex;
         grid-column-start: 2;
         grid-column-end: 4;
@@ -98,22 +138,75 @@
       flex-direction: column;
       width: 20rem;
     }
+
+    &-1 {
+      & [class='title'] {
+        height: 18px;
+        > :first-child {
+          align-self: flex-end;
+        }
+        > :last-child {
+          align-self: flex-start;
+        }
+      }
+    }
+
+    &-2 {
+      & [class='title'] {
+        margin-top: 2px;
+        > :last-child {
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+
+    &-3 {
+      width: 267px;
+      margin-top: 40px !important;
+    }
   }
 
-  &__date-dropdown-card {
+  &__masked-text-field {
+    margin-top: 24px !important;
+  }
+
+  &__divided-date-dropdown-card {
+    margin-top: 41px !important;
+  }
+
+  &__filter-date-dropdown-card {
+    margin-top: 40px !important;
+
+    & [class='title'] {
+      margin-bottom: 3px;
+    }
   }
 
   &__checkbox-buttons {
     width: 13.875rem;
   }
 
+  &__radio-buttons {
+    margin-top: 41px !important;
+
+    & [class='title'] {
+      margin-bottom: 13px;
+    }
+  }
+
   &__toggle {
     > :last-child {
-      margin-top: 0.625rem;
+      margin-top: 15px;
+    }
+
+    & [class='title'] {
+      margin-bottom: 14px;
     }
   }
 
   &__like-button {
+    margin-top: 45px !important;
+
     &_group {
       display: flex;
       > :last-child {
@@ -132,9 +225,17 @@
   }
 
   &__buttons {
-    > :not(:first-child) {
-      margin-top: 1.25rem;
+    margin-top: 32px;
+    &_group-1 {
+      margin-top: 16px;
     }
+    &_group-2 {
+      margin-top: 30px;
+    }
+    &_group-3 {
+      margin-top: 31px;
+    }
+
     &_group-1,
     &_group-2,
     &_group-3 {
@@ -151,14 +252,18 @@
     &_group-4 {
       width: 20rem;
       height: 2.75rem;
+      margin-top: 1px;
       display: flex;
       min-width: 20rem;
-      margin-top: 1.875rem;
     }
   }
 
   &__dropdown {
-    width: min-content;
+    width: 20rem;
+
+    &-other {
+      width: 16.625rem;
+    }
   }
 
   &__rate-star-buttons {

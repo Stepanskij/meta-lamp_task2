@@ -5,6 +5,9 @@
   flex-direction: column;
   &__bullet {
     display: flex;
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 
   &__mark {
@@ -16,7 +19,7 @@
   }
 
   &__text {
-    width: 16.875rem;
+    width: 240px;
     line-height: 1.5rem;
     color: $color-dark-shade-75;
   }

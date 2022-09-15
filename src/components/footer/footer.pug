@@ -9,7 +9,7 @@ mixin footer(props = {})
   div.footer
     - if (isMobileVersion)
       div.footer__mobile
-        div.footer__mobile-logo
+        a.footer__mobile-logo(href="landing-page.html")
           img.footer__mobile-logo-img(src="../../assets/img/logo-toxin.svg")
         div.footer__mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         div.footer__mobile-social-media      
@@ -22,7 +22,7 @@ mixin footer(props = {})
     - else
       div.footer__part-1
         div.footer__colum-1
-          div.footer__logo
+          a.footer__logo(href="landing-page.html")
             img.footer__logo-img(src="../../assets/img/logo-toxin.svg")
           span.footer__logo-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         div.footer__colum-2
@@ -50,9 +50,9 @@ mixin footer(props = {})
       div.footer__part-2
         div.footer__text Copyright © 2018 Toxin отель. Все права защищены.
         div.footer__social-media      
-          a(class="footer__social-media-link" href="https://twitter.com")
+          a(class="footer__social-media-link" href="https://twitter.com" target="_blank")
             img(class="footer__social-media-image" src=`../../assets/img/twitter-icon.svg`)
-          a(class="footer__social-media-link" href="https://facebook.com")
+          a(class="footer__social-media-link" href="https://facebook.com" target="_blank")
             img(class="footer__social-media-image" src=`../../assets/img/facebook-icon.svg`)
-          a(class="footer__social-media-link" href="https://instagram.com")
+          a(class="footer__social-media-link" href="https://instagram.com" target="_blank")
             img(class="footer__social-media-image" src=`../../assets/img/instagram-icon.svg`)

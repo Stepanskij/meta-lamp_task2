@@ -7,11 +7,27 @@
   &__colum-1,
   &__colum-2,
   &__colum-3 {
+    margin-top: 71px;
+
     &:not(:first-child) {
       margin-left: 2.5rem;
     }
     & > *:not(:first-child) {
       margin-top: 2.5rem;
+    }
+  }
+
+  &__colum-2 {
+    margin-top: 74px;
+  }
+
+  &__colum-3 {
+    >:nth-child(2) {
+      margin-top: 38px;
+    }
+
+    >:nth-child(3) {
+      margin-top: 38px;
     }
   }
 

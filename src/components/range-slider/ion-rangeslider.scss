@@ -20,8 +20,9 @@
     .irs-handle {
       z-index: 0;
       cursor: pointer;
-      width: 0.75rem;
-      height: 0.75rem;
+      width: 15px;
+      height: 15px;
+      top: 20px;
       background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
       border: 0.125rem solid #ffffff;
       border-radius: 0.625rem;

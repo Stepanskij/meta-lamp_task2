@@ -1,7 +1,6 @@
 @import 'shared/styles/colors.scss';
 
 .header {
-  width: 90rem;
   height: min-content;
   padding: 0.9375rem 8.75rem 0.9375rem 8.75rem;
   display: flex;
@@ -13,6 +12,7 @@
   }
 
   &__logo {
+    display: flex;
     flex-grow: 1;
   }
   &__about-us {
@@ -60,7 +60,7 @@
       position: absolute;
       max-height: 0;
       margin-top: 1.25rem;
-      padding: 0 10px 3px 10px;
+      padding: 0 0.625rem 0.1875rem 0.625rem;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -88,11 +88,13 @@
 
   &__button {
     &-enter {
-      width: 6.1875rem;
+      text-decoration: none;
+      min-width: 5.4375rem;
       height: 2.125rem;
     }
     &-register {
-      width: 12.25rem;
+      text-decoration: none;
+      min-width: 12.25rem;
       height: 2.125rem;
     }
   }

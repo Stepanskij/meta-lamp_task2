@@ -2,12 +2,13 @@
 
 .sign-in {
   position: relative;
-  width: 90rem;
   height: 47.0625rem;
   background-image: url(../../../shared/img/background-registration-page.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   &__enter-card {
     position: absolute;
     top: 10.75rem;
-    left: calc(90rem / 2 - 23.75rem / 2);
+    left: calc(100% / 2 - 23.75rem / 2);
   }
 }

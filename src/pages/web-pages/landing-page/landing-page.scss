@@ -2,9 +2,10 @@
 
 .landing-page {
   position: relative;
-  width: 90rem;
   height: 51.875rem;
   background-image: url(../../../shared/img/background-landing-page.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   &__chose-room-card {
     position: absolute;
     top: 4.375rem;

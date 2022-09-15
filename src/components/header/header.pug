@@ -7,7 +7,7 @@ mixin header(props = {})
     } = props;
 
   div.header
-    div.header__logo
+    a.header__logo(href="landing-page.html")
       img.header__logo-img(src="../../assets/img/logo-toxin.svg")
     a.header__about-us(href="https://www.error.com/") О Нас 
     div.header__services
@@ -30,7 +30,7 @@ mixin header(props = {})
       div.header__separator
       div.header__user-name Юлий Цезарь
     - else
-      div.header__button-enter
+      a.header__button-enter(href="sign-in.html")
         +button({children : "Войти", isOutlined:true})
-      div.header__button-register        
+      a.header__button-register(href="registration.html")      
         +button({children : "Зарегистрироваться"})

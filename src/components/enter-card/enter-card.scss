@@ -34,7 +34,7 @@
   }
 
   &__enter {
-    margin-top: 1.875rem;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,10 +43,11 @@
       height: 2.75rem;
     }
 
-    &_text {
+    &-text {
       font-weight: 400;
       font-size: 0.875rem;
       line-height: 1.125rem;
+      letter-spacing: -0.1px;
     }
   }
 }

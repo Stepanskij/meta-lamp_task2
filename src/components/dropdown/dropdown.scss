@@ -1,9 +1,11 @@
 @import 'shared/styles/colors.scss';
 
 .dropdown {
+  position: relative;
+
   &__container {
     cursor: pointer;
-    width: 16.625rem;
+    width: 100%;
     height: 2.75rem;
     display: flex;
     align-items: center;
@@ -19,36 +21,39 @@
     &_is-opened {
       border-color: $color-dark-shade-50;
     }
-  }
 
-  &__container-text {
-    margin-left: 0.9375rem;
-    flex-grow: 1;
-    font-weight: 400;
-    line-height: 1.5rem;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: $color-dark-shade-75;
-  }
+    &-text {
+      margin-left: 0.9375rem;
+      flex-grow: 1;
+      font-weight: 400;
+      line-height: 1.5rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: $color-dark-shade-75;
+    }
 
-  &__container-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    min-width: 2.75rem;
-    height: 2.75rem;
-    transform: scaleY(-1);
-    &_is-opened {
-      transform: scaleY(1);
+    &-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      min-width: 2.75rem;
+      height: 2.75rem;
+      transform: scaleY(-1);
+      &_is-opened {
+        transform: scaleY(1);
+      }
     }
   }
 
-  &__list {
-    width: 16.625rem;
+  &__container + &__list {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
     max-height: 0;
     display: flex;
     flex-direction: column;
+    background: white;
     border: 0.0625rem solid $color-dark-shade-25;
     border-bottom-width: 0;
     border-top-width: 0;
@@ -58,6 +63,10 @@
     transition: 0.75s;
     > :last-child[class*='dropdown__list-row'] {
       margin-bottom: 0.4375rem;
+    }
+
+    > :first-child {
+      margin-top: 4px !important;
     }
 
     &_is-opened {
@@ -79,6 +88,7 @@
       line-height: 0.9375rem;
       text-transform: uppercase;
       color: $color-dark-shade-100;
+      letter-spacing: 0.2px;
       &:first-child {
         flex-grow: 1;
       }

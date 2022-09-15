@@ -2,9 +2,11 @@
 
 .registration {
   position: relative;
-  width: 90rem;
   height: 47.0625rem;
   background-image: url(../../../shared/img/background-registration-page.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   &__account-registration-card {
     position: absolute;
     top: 1.25rem;

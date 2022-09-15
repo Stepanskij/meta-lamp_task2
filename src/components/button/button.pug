@@ -17,7 +17,7 @@ mixin button(props = {})
         span.button__native-element
           span.button__text= children
     - else if(isWord)
-      button.button__native-element(type= type)
+      button(class="button__native-element button__native-element_word" type= type)
         span.button__text= children
     - else if(hasArrow)
       button(class="button__native-element button__native-element_arrow" type= type)

@@ -21,26 +21,26 @@ include ../../../components/masked-text-field/masked-text-field.pug
 
 
 block title
-  title Colors & Fonts 
+  title Form Elements
 block content
 
   div.form-elements 
 
     div.form-elements__grid-1-1
       div.form-elements__text-field-1
-        +title({titleName: "text field"})
+        +title({titleName: "text field", titleSubText: "default"})
         +text-field({placeholder: "Email", type: "email"})
       div.form-elements__text-field-2
         +title({titleName: "text field", titleSubText: "hover / focus"})
-        +text-field({placeholder: "Text field", type: "text", value: "This is pretty awesome",})
-      div(class="form-elements__divided-date-dropdown-card js-form-elements__divided-date-dropdown-card")
-        +divided-date-dropdown-card()    
+        +text-field({placeholder: "Text field", type: "text", value: "This is pretty awesome",})      
       div(class="form-elements__dropdown js-form-elements__dropdown")
         +title({titleName: "dropdown"})
         +dropdown({hasButtons:true})  
       div(class="form-elements__masked-text-field js-form-elements__masked-text-field")
         +title({titleName: "masked text field"})
-        +masked-text-field()              
+        +masked-text-field()   
+      div(class="form-elements__divided-date-dropdown-card js-form-elements__divided-date-dropdown-card")
+        +divided-date-dropdown-card()               
       div(class="form-elements__filter-date-dropdown-card js-form-elements__filter-date-dropdown-card")
         +title({titleName: "filter date dropdown"})
         +date-dropdown-card()        
@@ -99,10 +99,10 @@ block content
         +paginator()
 
     div.form-elements__grid-2-1
-      div(class="form-elements__dropdown js-form-elements__dropdown")
+      div(class="form-elements__dropdown-other js-form-elements__dropdown")
         +title({titleName: "dropdown", titleSubText: "default"})
         +dropdown()
-      div(class="form-elements__dropdown js-form-elements__dropdown")
+      div(class="form-elements__dropdown-other js-form-elements__dropdown")
         +title({titleName: "dropdown", titleSubText: "expanded"})
         +dropdown()
     div.form-elements__grid-2-2

@@ -1,7 +1,6 @@
 @import 'shared/styles/colors.scss';
 
 .search-room {
-  width: 90rem;
   padding: 1.875rem 8.75rem 4.375rem 8.75rem;
   display: flex;
   border-bottom: 0.0625rem solid rgba(31, 32, 65, 0.25);
@@ -13,7 +12,7 @@
       flex-direction: column;
 
       & [class='title'] {
-        margin-bottom: 0.3125rem;
+        margin-bottom: 4px;
       }
     }
 
@@ -34,7 +33,7 @@
     flex-direction: column;
 
     &-text {
-      margin-top: 0.625rem;
+      margin-top: 5px;
       font-weight: 400;
       font-size: 0.75rem;
       line-height: 0.875rem;
@@ -43,7 +42,7 @@
   }
 
   &__house-rules {
-    margin-top: 1.875rem;
+    margin-top: 29px;
     [class='title'] {
       margin-bottom: 1rem;
     }
@@ -59,9 +58,10 @@
     font-size: 1.5rem;
     line-height: 1.8125rem;
     color: $color-dark-shade-100;
+    letter-spacing: 0.7px;
   }
   &__rooms {
-    margin-top: 1.25rem;
+    margin-top: 21px;
     display: grid;
     grid-template-columns: min-content min-content min-content;
     grid-template-rows: min-content min-content min-content min-content;
@@ -69,7 +69,8 @@
     column-gap: 0.75rem;
   }
   &__paginator {
-    margin-top: 2.5625rem;
+    padding-right: 12px;
+    margin-top: 36px;
     align-self: center;
   }
 }

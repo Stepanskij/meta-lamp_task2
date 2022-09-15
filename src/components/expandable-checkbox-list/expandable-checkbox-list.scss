@@ -7,6 +7,7 @@
     margin-bottom: 1.125rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__title-text {
@@ -15,6 +16,7 @@
     font-size: 0.75rem;
     line-height: 0.9375rem;
     text-transform: uppercase;
+    letter-spacing: 0.2px;
   }
 
   &__title-expand-arrow {
@@ -41,14 +43,10 @@
 
   &__checkbox {
     display: flex;
-    > :last-child {
-      margin-left: 0.625rem;
-    }
   }
 
   &__label {
     cursor: pointer;
-    width: 1.25rem;
     height: 1.25rem;
     display: flex;
     align-items: center;
@@ -84,6 +82,7 @@
   }
 
   &__text {
+    margin-left: 0.625rem;
     line-height: 1.125rem;
     color: $color-dark-shade-50;
   }

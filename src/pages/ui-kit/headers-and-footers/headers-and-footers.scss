@@ -1,6 +1,8 @@
 @import 'shared/styles/colors.scss';
 
 .headers-and-footers {
+margin-top: 63px;
+
   > :not(:first-child) {
     margin-top: 2.5rem;
   }

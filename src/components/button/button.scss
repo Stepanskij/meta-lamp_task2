@@ -19,9 +19,16 @@
     border-radius: 1.375rem;
     background-image: $color-purple-gradient-100;
     color: #ffffff;
+
+    &_word {
+      width: 0;
+      height: 0;
+    }
+
     &_arrow {
       width: 20rem;
     }
+
     &:hover {
       background-image: $color-purple-gradient-50;
     }
@@ -34,6 +41,7 @@
     font-size: 0.75rem;
     line-height: 0.9375rem;
     text-transform: uppercase;
+    letter-spacing: 0.3px;
   }
 
   &_hollow &__native-element &__native-element {
@@ -45,7 +53,10 @@
   &_hollow &__text {
     color: $color-purple;
   }
-
+  &_word {
+    width: min-content !important;
+    height: min-content !important;
+  }
   &_word &__native-element {
     width: min-content;
     height: min-content;

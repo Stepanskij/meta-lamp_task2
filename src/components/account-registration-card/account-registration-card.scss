@@ -2,7 +2,7 @@
 
 .account-registration-card {
   width: 23.75rem;
-  padding: 2.5rem 1.875rem 1.875rem 1.875rem;
+  padding: 2.375rem 1.875rem 1.875rem 1.875rem;
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -20,28 +20,38 @@
     font-size: 1.5rem;
     line-height: 1.8125rem;
     color: $color-dark-shade-100;
+    letter-spacing: 0.65px;
   }
 
   &__text-fields-name {
     > :not(:first-child) {
-      margin-top: 0.625rem;
+      margin-top: 10px;
     }
   }
 
   &__date-of-birth {
-    margin-top: 1.5rem;
+    margin-top: 21px;
   }
 
   &__data-for-logging {
-    margin-top: 1.25rem;
-    > :not(:first-child) {
-      margin-top: 0.625rem;
+    margin-top: 1.25rem; 
+
+    > :nth-child(3) {
+      margin-top: 9px;
+    }
+
+    > :nth-child(4) {
+      margin-top: 10px;
+    }
+
+    & [class='title'] {
+      margin-bottom: 4px !important;
     }
   }
 
   &__go-to-payment {
     height: 2.75rem;
-    margin-top: 2.375rem;
+    margin-top: 25px;
   }
 
   &__enter {

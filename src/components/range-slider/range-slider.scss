@@ -6,7 +6,7 @@
   height: 3.4375rem;
   max-width: 16.625rem;
   &__title {
-    margin-bottom: 1.25rem;
+    margin-bottom: 18px;
     display: flex;
     justify-content: space-between;
     &-text {
@@ -20,9 +20,10 @@
       font-size: 0.75rem;
       color: $color-dark-shade-50;
       text-transform: uppercase;
+      letter-spacing: 0.4px;
     }
   }
-  &__container{
+  &__container {
     position: relative;
   }
 }

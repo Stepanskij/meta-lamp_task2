@@ -15,6 +15,7 @@
       line-height: 0.9375rem;
       color: $color-dark-shade-100;
       text-transform: uppercase;
+      letter-spacing: 0.2px;
     }
   }
 
@@ -35,7 +36,8 @@
       align-items: center;
       width: 12.9375rem;
       height: 2.75rem;
-      margin-left: 0.9375rem;
+      margin-left: 14px;
+      margin-top: -3px;
       font-weight: 400;
       line-height: 1.5rem;
       color: $color-dark-shade-75;
@@ -60,8 +62,8 @@
     width: min-content;
     max-height: 0;
     grid-column-start: 1;
-    grid-column-end: 3;  
-    margin-top: 4.3125rem;    
+    grid-column-end: 3;
+    margin-top: 4.3125rem;
     overflow: hidden;
     z-index: 1;
     transition: max-height 0.3s;

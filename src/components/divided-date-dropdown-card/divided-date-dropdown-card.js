@@ -24,7 +24,6 @@ class DividedDateDropdownCard {
     ];
 
     this.applyButton = {
-      className: 'js-apply-button',
       content: 'Применить',
       onClick: () => {
         this._changeOpenState();
@@ -48,12 +47,17 @@ class DividedDateDropdownCard {
       prevHtml: arrowSVGLeft,
     });
 
+    this.buttonsDOMs = [...this.datePicker.$buttons.querySelectorAll('.air-datepicker-button')];
+    this.DOMClearButton = this.buttonsDOMs[0];
+    this.DOMApplyButton = this.buttonsDOMs[1];    
     this.timeOfStay = 0;
   };
 
   _setEventHandlers = () => {
     this.DOMContainers[0].addEventListener('click', this._changeOpenState);
     this.DOMContainers[1].addEventListener('click', this._changeOpenState);
+
+    this.DOMClearButton.addEventListener('click', this._getNumberOfDays);
   };
 
   _changeOpenState = () => {

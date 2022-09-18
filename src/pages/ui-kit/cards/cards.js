@@ -27,7 +27,6 @@ new ReserveRoomCard({
   numberRoom: '888',
   classRoom: 'люкс',
   priceRoom: 9990,
-  priceAdditionalService: 300,
   discountService: 2179,
 });
 

@@ -2,24 +2,12 @@ import DividedDateDropdownCard from '../divided-date-dropdown-card/divided-date-
 import Dropdown from '../dropdown/dropdown.js';
 
 class ReserveRoomCard {
-  constructor({
-    outerContainerElement,
-    numberRoom = '000',
-    classRoom = 'класс',
-    priceRoom = 0,
-    priceService = 0,
-    priceAdditionalService = 0,
-    discountService = 0,
-    discountAdditionalService = 0,
-  }) {
+  constructor({ outerContainerElement, numberRoom = '000', classRoom = 'класс', priceRoom = 0, discountService = 0 }) {
     this.outerContainerElement = outerContainerElement;
     this.numberRoom = numberRoom;
     this.classRoom = classRoom;
     this.priceRoom = priceRoom;
-    this.priceService = priceService;
-    this.priceAdditionalService = priceAdditionalService;
     this.discountService = discountService;
-    this.discountAdditionalService = discountAdditionalService;
 
     this.dropdownList = [
       ['Сколько гостей'],
@@ -43,30 +31,35 @@ class ReserveRoomCard {
     this.DOMPriceRoom = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-1-1');
     this.DOMPriceRoomPerDay = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-1-2');
 
-    this.DOMPriceService = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-2-3');
-    this.DOMDiscountService = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-2-1');
+    this.DOMDiscountServiceText = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-2-1');
+    this.DOMDiscountService = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-2-3');
 
-    this.DOMPriceAdditionalService = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-3-3');
-    this.DOMDiscountAdditionalService = this.outerContainerElement.querySelector(
+    this.DOMPriceAdditionalServiceText = this.outerContainerElement.querySelector(
       '.js-reserve-room-card__price-info-3-1',
     );
+    this.DOMPriceAdditionalService = this.outerContainerElement.querySelector('.js-reserve-room-card__price-info-3-3');
 
     this.DOMFinPrice = this.outerContainerElement.querySelector('.js-reserve-room-card__fin-price');
 
     this.dividedDateDropdownCard = new DividedDateDropdownCard(this.DOMDates);
-    this.DOMApplyButton = this.DOMDates.querySelector('.js-apply-button');
-    new Dropdown(this.DOMGuests, this.dropdownList);
+    this.guestsDropdownCard = new Dropdown(this.DOMGuests, this.dropdownList);
   };
 
   _setEventHandlers = () => {
-    this.DOMApplyButton.addEventListener('click', this._reFillInfoCard);
+    this.dividedDateDropdownCard.DOMApplyButton.addEventListener('click', this._reFillInfoCard);
+    this.dividedDateDropdownCard.DOMClearButton.addEventListener('click', this._reFillInfoCard);
+
+    this.guestsDropdownCard.DOMButtonClear.addEventListener('click', this._reFillInfoCard);
+    this.guestsDropdownCard.DOMButtonApply.addEventListener('click', this._reFillInfoCard);
   };
 
   _fillInfoCard = () => {
     this.DOMNumberRoomTitle.textContent = this.numberRoom;
     this.DOMClassRoomTitle.textContent = this.classRoom;
     this.DOMPriceRoomTitle.textContent = this._formattedNumber(this.priceRoom) + '₽';
-
+    //
+    this.DOMPriceRoomPerDay.textContent =
+      this._formattedNumber(this.priceRoom * this.dividedDateDropdownCard.timeOfStay) + '₽';
     this.DOMPriceRoom.textContent =
       this._formattedNumber(this.priceRoom) +
       '₽' +
@@ -74,30 +67,22 @@ class ReserveRoomCard {
       this.dividedDateDropdownCard.timeOfStay +
       ' ' +
       this._checkConjugation(['сутки', 'суток', 'суток'], this.dividedDateDropdownCard.timeOfStay);
-    this.DOMPriceRoomPerDay.textContent =
-      this._formattedNumber(this.priceRoom * this.dividedDateDropdownCard.timeOfStay) + '₽';
-
-    this.DOMPriceService.textContent = this.priceService + '₽';
-    this.DOMDiscountService.textContent =
-      'Сбор за услуги' +
-      `${this.discountService ? ': скидка ' + this._formattedNumber(this.discountService) + '₽' : ''}`;
-
-    this.DOMPriceAdditionalService.textContent = this.priceAdditionalService + '₽';
-    this.DOMDiscountAdditionalService.textContent =
-      'Сбор за дополнительные услуги' +
-      `${
-        this.discountAdditionalService ? ': скидка ' + this._formattedNumber(this.discountAdditionalService) + '₽' : ''
-      }`;
-
+    //
+    this.DOMDiscountServiceText.textContent =
+      'Сбор за услуги: скидка ' + `${this._formattedNumber(this.discountService) + '₽'}`;
+    this.DOMDiscountService.textContent = 0 + '₽';
+    //
+    this.DOMPriceAdditionalServiceText.textContent = 'Сбор за дополнительные услуги';
+    this.DOMPriceAdditionalService.textContent =
+      (this.guestsDropdownCard.items[0].numberValue + this.guestsDropdownCard.items[1].numberValue) * 100 + '₽';
+    //
     this.DOMFinPrice.textContent =
       `${
         this.dividedDateDropdownCard.timeOfStay !== 0
           ? this._formattedNumber(
               this.priceRoom * this.dividedDateDropdownCard.timeOfStay +
-                this.priceService +
-                this.priceAdditionalService -
-                this.discountService -
-                this.discountAdditionalService,
+                (this.guestsDropdownCard.items[0].numberValue + this.guestsDropdownCard.items[1].numberValue) * 100 -
+                this.discountService,
             )
           : '0'
       }` + '₽';
@@ -111,18 +96,23 @@ class ReserveRoomCard {
       this.dividedDateDropdownCard.timeOfStay +
       ' ' +
       this._checkConjugation(['сутки', 'суток', 'суток'], this.dividedDateDropdownCard.timeOfStay);
+    //
+    this.DOMPriceRoomPerDay.textContent =
+      this._formattedNumber(this.priceRoom * this.dividedDateDropdownCard.timeOfStay) + '₽';
+    //
     this.DOMFinPrice.textContent =
       `${
         this.dividedDateDropdownCard.timeOfStay !== 0
           ? this._formattedNumber(
               this.priceRoom * this.dividedDateDropdownCard.timeOfStay +
-                this.priceService +
-                this.priceAdditionalService -
-                this.discountService -
-                this.discountAdditionalService,
+                (this.guestsDropdownCard.items[0].numberValue + this.guestsDropdownCard.items[1].numberValue) * 100 -
+                this.discountService,
             )
           : '0'
       }` + '₽';
+    //
+    this.DOMPriceAdditionalService.textContent =
+      (this.guestsDropdownCard.items[0].numberValue + this.guestsDropdownCard.items[1].numberValue) * 100 + '₽';
   };
 
   _checkConjugation = (conjugations, numString) => {

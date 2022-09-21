@@ -12,12 +12,12 @@ const PATHS = {
 const pages = [
   { pageName: 'colors-and-fonts', pageType: 'ui-kit' },
   { pageName: 'form-elements', pageType: 'ui-kit' },
-  { pageName: 'cards', pageType: 'ui-kit' },  
+  { pageName: 'cards', pageType: 'ui-kit' },
   { pageName: 'headers-and-footers', pageType: 'ui-kit' },
   { pageName: 'landing-page', pageType: 'web-pages' },
-  { pageName: 'room-details', pageType: 'web-pages' },    
+  { pageName: 'room-details', pageType: 'web-pages' },
   { pageName: 'registration', pageType: 'web-pages' },
-  { pageName: 'search-room', pageType: 'web-pages' },  
+  { pageName: 'search-room', pageType: 'web-pages' },
   { pageName: 'sign-in', pageType: 'web-pages' },
 ];
 
@@ -34,7 +34,7 @@ pages.forEach(e => {
 });
 
 const entries = pages.reduce((obj, curEntry) => {
-  obj[curEntry.pageName] = `${PATHS.src}/pages/${curEntry.pageType}/${curEntry.pageName}/${curEntry.pageName}.js`;
+  obj[curEntry.pageName] = `${PATHS.src}/pages/${curEntry.pageType}/${curEntry.pageName}/${curEntry.pageName}.ts`;
   return obj;
 }, {});
 
@@ -46,7 +46,7 @@ pluginsOptions.push(
     chunks: ['index'],
   }),
 );
-entries.index = `${PATHS.src}/pages/index/index.js`;
+entries.index = `${PATHS.src}/pages/index/index.ts`;
 
 pluginsOptions.push(
   new MiniCssExtractPlugin({
@@ -78,7 +78,7 @@ module.exports = {
 
   resolve: {
     modules: ['node_modules', path.resolve(__dirname, '..', 'src')],
-    extensions: ['.js', '.json', '.css', '.pug'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.css', '.pug'],
   },
 
   module: {
@@ -143,6 +143,10 @@ module.exports = {
             options: { sourceMap: true, config: { path: `postcss.config.js` } },
           },
         ],
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
       },
     ],
   },

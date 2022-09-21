@@ -42,20 +42,6 @@
     display: grid;
     grid-template: min-content min-content/min-content min-content;
 
-    &-text {
-      cursor: pointer;
-    }
-
-    &-arrow {
-      padding: 0 0.375rem 0 0.375rem;
-      align-self: center;
-      transform: scaleY(-1);
-      cursor: pointer;
-    }
-    &_opened &-arrow {
-      transform: scaleY(1);
-    }
-
     &-list {
       position: absolute;
       max-height: 0;
@@ -80,10 +66,24 @@
         }
       }
     }
+
     &_opened &-list {
       max-height: 6.25rem;
       box-shadow: 0 0.1875rem 0.625rem 0.1875rem $color-dark-shade-25;
     }
+  }
+
+  &__current {
+    cursor: pointer;
+    &-arrow {
+      padding: 0 0.375rem 0 0.375rem;
+      align-self: center;
+      transform: scaleY(-1);
+    }
+  }
+  &__services_opened &__current-arrow,
+  &__agreements_opened &__current-arrow {
+    transform: scaleY(1);
   }
 
   &__button {

@@ -10,18 +10,20 @@ mixin header(props = {})
     a.header__logo(href="landing-page.html")
       img.header__logo-img(src="../../assets/img/logo-toxin.svg")
     a.header__about-us(href="https://www.error.com/") О Нас 
-    div.header__services
-      span(class="header__services-text js-header__services-text") Услуги
-      img(class="header__services-arrow js-header__services-arrow" src="../../assets/img/expand-arrow-dark-75.svg")
+    div(class="header__services js-header__services")
+      div(class="header__current js-header__current")
+        span.header__current-text Услуги
+        img.header__current-arrow(src="../../assets/img/expand-arrow-dark-75.svg")
       div(class="header__services-list js-header__services-list")
         a.header__services-list-link-1(href="https://www.error.com/") Услуга 1
         a.header__services-list-link-2(href="https://www.error.com/") Услуга 2
         a.header__services-list-link-3(href="https://www.error.com/") Услуга 3
     a.header__vacancy(href="https://www.error.com/") Вакансии
     a.header__news(href="https://www.error.com/") Новости
-    div.header__agreements
-      span(class="header__agreements-text js-header__agreements-text") Соглашения
-      img(class="header__agreements-arrow js-header__agreements-arrow" src="../../assets/img/expand-arrow-dark-75.svg")
+    div(class="header__agreements js-header__agreements")
+      div(class="header__current js-header__current")
+        span.header__current-text Соглашения
+        img.header__current-arrow(src="../../assets/img/expand-arrow-dark-75.svg")
       div(class="header__agreements-list js-header__agreements-list")
         a.header__agreements-list-link-1(href="https://www.error.com/") Соглашение 1
         a.header__agreements-list-link-2(href="https://www.error.com/") Соглашение 2

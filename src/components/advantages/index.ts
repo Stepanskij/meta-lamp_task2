@@ -1,0 +1,3 @@
+import './advantages.scss'
+
+export {};

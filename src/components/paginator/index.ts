@@ -1,0 +1,3 @@
+import './paginator.scss'
+
+export {};
